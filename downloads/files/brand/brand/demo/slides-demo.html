@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Слайды — демо палитры Алены</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700;800&family=DM+Sans:ital@1&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #FBF7F5; --text: #332A2E; --muted: #5C4F54; --muted-2: #7A6C71; --muted-3: #9B8D92; --faint: #C3B4BA;
+  --accent: #9C5F6A; --accent-dark: #E3C2C9;
+  --block: #F4ECEA; --card: #F7F1EF; --card-border: #E8DCD8; --tip: #EFE4E1; --line: #ECE1DE; --nav-line: #F1E8E5;
+  --split: 60%;
+}
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg); color: var(--text);
+  font-size: 17px; line-height: 1.75; -webkit-font-smoothing: antialiased;
+}
+.slide {
+  width: 100%; height: 900px;
+  display: flex; flex-direction: column;
+  position: relative; background: var(--bg);
+}
+.divider { position: absolute; top: 0; bottom: 0; left: var(--split); width: 1px; background: var(--line); }
+.nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 48px; border-bottom: 1px solid var(--nav-line);
+  background: var(--bg); z-index: 10; flex-shrink: 0; width: var(--split);
+}
+.nav__logo { text-decoration: none; display: flex; align-items: center; }
+.nav__mono { font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; font-size: 22px; line-height: 30px; color: var(--accent); }
+.nav__logo-name { font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 400; font-style: italic; color: var(--muted-3); letter-spacing: 0.5px; margin-right: 8px; }
+.slide__body { flex: 1; display: flex; align-items: center; width: var(--split); padding: 0 48px; }
+.slide__inner { width: 100%; max-width: 580px; }
+.badge {
+  display: inline-block; font-size: 11px; font-weight: 600;
+  color: var(--accent); border: 1px solid var(--accent);
+  padding: 5px 16px; margin-bottom: 20px; letter-spacing: 2px; text-transform: uppercase;
+}
+.hero h1 { font-family: 'Libre Baskerville', Georgia, serif; font-size: 36px; font-weight: 700; line-height: 1.25; margin-bottom: 16px; }
+.hero h1 em { font-style: italic; color: var(--accent); }
+.hero__desc { font-size: 17px; color: var(--muted-2); line-height: 1.7; }
+.hero__meta { font-size: 13px; color: var(--muted-3); margin-top: 16px; letter-spacing: 1px; }
+
+.formula__heading { font-family: 'Libre Baskerville', Georgia, serif; font-size: 28px; font-weight: 700; line-height: 1.3; margin-bottom: 28px; }
+.formula__heading em { font-style: italic; color: var(--accent); }
+.formula__row { display: flex; align-items: center; gap: 16px; margin-bottom: 32px; }
+.formula__step { flex: 1; background: var(--block); padding: 18px 16px; text-align: center; }
+.formula__step-title { font-family: 'Libre Baskerville', Georgia, serif; font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+.formula__step-text { font-size: 12px; color: var(--muted-2); line-height: 1.5; }
+.formula__arrow { color: var(--accent); font-size: 18px; flex-shrink: 0; opacity: 0.5; }
+.formula__result { border: 1px solid var(--accent); padding: 18px 16px; text-align: center; flex: 1; }
+.formula__result .formula__step-title { color: var(--accent); }
+.formula__note { font-size: 14px; color: var(--muted-3); font-style: italic; margin-top: 8px; }
+
+.quote-slide__label { font-size: 11px; font-weight: 600; color: var(--muted-3); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 28px; }
+.quote-slide__mark { font-family: 'Libre Baskerville', Georgia, serif; font-size: 80px; color: var(--accent); line-height: 0.5; margin-bottom: 16px; opacity: 0.3; }
+.quote-slide__text { font-family: 'Libre Baskerville', Georgia, serif; font-size: 24px; font-weight: 400; font-style: italic; line-height: 1.5; color: var(--text); max-width: 480px; margin-bottom: 28px; }
+.quote-slide__text em { color: var(--accent); }
+.quote-slide__divider { width: 40px; height: 2px; background: var(--accent); margin-bottom: 20px; }
+.quote-slide__source { font-size: 14px; color: var(--muted-3); line-height: 1.6; }
+</style>
+</head>
+<body>
+
+<!-- Слайд 1: титульный -->
+<div class="slide">
+<div class="divider"></div>
+<nav class="nav">
+  <a class="nav__logo" href="#"><span class="nav__mono">Ц</span></a>
+  <span class="nav__logo-name">the.tsarevna</span>
+</nav>
+<div class="slide__body">
+  <div class="slide__inner">
+    <div class="hero">
+      <div class="badge">УРОК</div>
+      <h1>Почему твои визуализации <em>не работают</em></h1>
+      <p class="hero__desc">Пока тело зажато, визуализация — это просто фантазии.</p>
+      <p class="hero__meta">ТЕЛО &middot; ЧУВСТВОВАНИЕ &middot; 15 МИНУТ</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Слайд 2: формула -->
+<div class="slide">
+<div class="divider"></div>
+<nav class="nav">
+  <a class="nav__logo" href="#"><span class="nav__mono">Ц</span></a>
+  <span class="nav__logo-name">the.tsarevna</span>
+</nav>
+<div class="slide__body">
+  <div class="slide__inner">
+    <div class="formula__heading">Формула <em>метода</em></div>
+    <div class="formula__row">
+      <div class="formula__step">
+        <div class="formula__step-title">Расслабленное тело</div>
+        <div class="formula__step-text">Лёжа и слушая</div>
+      </div>
+      <div class="formula__arrow">+</div>
+      <div class="formula__step">
+        <div class="formula__step-title">Чувствование телом</div>
+        <div class="formula__step-text">Прожить, а не представить</div>
+      </div>
+      <div class="formula__arrow">=</div>
+      <div class="formula__result">
+        <div class="formula__step-title">Другие выборы</div>
+        <div class="formula__step-text">И другая жизнь</div>
+      </div>
+    </div>
+    <p class="formula__note">Пока тело зажато, визуализация — это просто фантазии.</p>
+  </div>
+</div>
+</div>
+
+<!-- Слайд 3: цитата -->
+<div class="slide">
+<div class="divider"></div>
+<nav class="nav">
+  <a class="nav__logo" href="#"><span class="nav__mono">Ц</span></a>
+  <span class="nav__logo-name">the.tsarevna</span>
+</nav>
+<div class="slide__body">
+  <div class="slide__inner">
+    <div class="quote-slide__label">КЛЮЧЕВАЯ МЫСЛЬ</div>
+    <div class="quote-slide__mark">&ldquo;</div>
+    <div class="quote-slide__text">Тебя не сломали — тебя зажали. <em>Чинить нечего.</em></div>
+    <div class="quote-slide__divider"></div>
+    <p class="quote-slide__source">Из железной леди — обратно в живую женщину.</p>
+  </div>
+</div>
+</div>
+
+</body>
+</html>

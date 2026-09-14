@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Почему твои визуализации не работают</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700;800&family=DM+Sans:ital@1&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #FBF7F5; --text: #332A2E; --muted: #5C4F54; --muted-2: #7A6C71; --muted-3: #9B8D92; --faint: #C3B4BA;
+  --accent: #9C5F6A; --accent-dark: #E3C2C9;
+  --block: #F4ECEA; --card: #F7F1EF; --card-border: #E8DCD8; --tip: #EFE4E1; --line: #ECE1DE; --nav-line: #F1E8E5;
+}
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg); color: var(--text);
+  font-size: 17px; line-height: 1.75; -webkit-font-smoothing: antialiased;
+}
+.nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 48px; border-bottom: 1px solid var(--nav-line);
+  position: sticky; top: 0; background: var(--bg); z-index: 100;
+}
+.nav__logo { text-decoration: none; display: flex; align-items: center; }
+.nav__mono {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-style: italic; font-size: 22px; line-height: 30px; color: var(--accent);
+}
+.nav__logo-name {
+  font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 400; font-style: italic;
+  color: var(--muted-3); letter-spacing: 0.5px;
+}
+.container { max-width: 740px; margin: 0 auto; padding: 0 24px; }
+.hero { padding: 60px 0 48px; }
+.badge {
+  display: inline-block; font-size: 11px; font-weight: 600;
+  color: var(--accent); border: 1px solid var(--accent);
+  padding: 5px 16px; margin-bottom: 20px; letter-spacing: 2px; text-transform: uppercase;
+}
+.hero h1 {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 38px; font-weight: 700; line-height: 1.25; margin-bottom: 16px;
+}
+.hero h1 em { font-style: italic; color: var(--accent); }
+.hero__desc { font-size: 18px; color: var(--muted-2); line-height: 1.7; }
+.hero__meta { font-size: 14px; color: var(--muted-3); margin-top: 16px; letter-spacing: 1px; }
+.intro-bold { font-size: 18px; font-weight: 700; line-height: 1.65; color: var(--text); padding: 40px 0 16px; }
+.intro-text { font-size: 17px; color: var(--muted); line-height: 1.75; padding-bottom: 48px; }
+.section-heading {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 30px; font-weight: 700; line-height: 1.3;
+  padding: 56px 0 24px; border-top: 1px solid var(--line);
+}
+.section-heading span { color: var(--accent); margin-right: 8px; }
+.section-heading em { font-style: italic; color: var(--accent); }
+.highlight { background: var(--block); padding: 20px 24px; margin: 24px 0; font-size: 16px; line-height: 1.75; color: var(--muted); }
+.highlight strong { color: var(--text); }
+.text { font-size: 17px; color: var(--muted); line-height: 1.75; margin-bottom: 16px; }
+.guide-list { list-style: none; margin: 16px 0 24px; }
+.guide-list li {
+  font-size: 16px; line-height: 1.75; color: var(--muted);
+  padding: 8px 0 8px 20px; position: relative; border-bottom: 1px solid var(--nav-line);
+}
+.guide-list li:last-child { border-bottom: none; }
+.guide-list li::before {
+  content: ''; position: absolute; left: 0; top: 16px;
+  width: 6px; height: 6px; border-radius: 50%; background: var(--accent);
+}
+.guide-list li strong { color: var(--text); }
+.scenario-card { border: 1px solid var(--card-border); padding: 32px; margin: 24px 0; background: var(--card); }
+.scenario-card__num {
+  font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; font-size: 14px;
+  color: var(--accent); letter-spacing: 1px; margin-bottom: 8px;
+}
+.scenario-card__title {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 20px; font-weight: 700; line-height: 1.4; margin-bottom: 20px;
+}
+.scenario-card__point { margin-bottom: 14px; }
+.scenario-card__point-label { font-weight: 600; font-size: 16px; color: var(--text); }
+.scenario-card__point-text { font-size: 15px; color: var(--muted-2); line-height: 1.7; }
+.scenario-card__tip { background: var(--tip); padding: 14px 18px; margin-top: 16px; font-size: 14px; color: var(--muted); line-height: 1.65; }
+.scenario-card__tip strong { color: var(--accent); }
+.footer-note {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 18px; font-style: italic; color: var(--muted);
+  text-align: center; padding: 48px 24px 0;
+}
+.footer-note em { color: var(--accent); }
+.footer { text-align: center; padding: 64px 24px; border-top: 1px solid var(--line); margin-top: 64px; color: var(--muted-3); font-size: 14px; }
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a class="nav__logo" href="#"><span class="nav__mono">Ц</span></a>
+  <span class="nav__logo-name">the.tsarevna</span>
+</nav>
+<div class="container">
+  <header class="hero">
+    <div class="badge">Гайд</div>
+    <h1>Почему твои визуализации <em>не работают</em></h1>
+    <p class="hero__desc">Пока тело зажато, визуализация — это просто фантазии. Объяснение без магии — и что с этим делать за 15 минут, лёжа.</p>
+    <p class="hero__meta">10 МИНУТ ЧТЕНИЯ &middot; ЛЁЖА И СЛУШАЯ</p>
+  </header>
+
+  <p class="intro-bold">Ничего не надо делать. Надо перестать делать.</p>
+  <p class="intro-text">Ты представляешь желаемое каждый вечер, а жизнь не меняется — и это не потому, что ты «плохо стараешься». Здесь — почему так происходит и где на самом деле вход.</p>
+
+  <h2 class="section-heading"><span>01.</span> Мозг тянет тебя в привычное <em>болотце</em></h2>
+  <div class="highlight"><strong>Так устроен мозг:</strong> он видит только то, что ему уже знакомо, и поэтому ты выбираешь одно и то же, пока внутри работает старая прога.</div>
+  <ul class="guide-list">
+    <li><strong>Подавленные эмоции живут в теле.</strong> Плечи у ушей, зажатая шея — и «шея болит не от подушки».</li>
+    <li><strong>В тревоге поле внимания сужается.</strong> В безопасности — расширяется, и мозг начинает замечать другое.</li>
+    <li><strong>Ты не слабая.</strong> Это не про характер и не про дисциплину — это про зажатое тело.</li>
+  </ul>
+
+  <h2 class="section-heading"><span>02.</span> Вход — через <em>чувствование телом</em></h2>
+  <p class="text">Не визуализировать головой, а прожить желаемое телом: лечь, послушать и дать телу вспомнить, как это — когда хорошо.</p>
+  <div class="scenario-card">
+    <div class="scenario-card__num">ПРАКТИКА</div>
+    <div class="scenario-card__title">Вечер после дня на автопилоте</div>
+    <div class="scenario-card__point">
+      <span class="scenario-card__point-label">Что сделать.</span>
+      <span class="scenario-card__point-text">Легла, выключила свет, включила практику на 15 минут — и дала плечам опуститься.</span>
+    </div>
+    <div class="scenario-card__tip"><strong>Совет:</strong> не превращай отдых в ещё одну задачу. Просто ляг и послушай.</div>
+  </div>
+
+  <p class="footer-note">Тебя не сломали — тебя зажали. <em>Чинить нечего.</em></p>
+</div>
+<footer class="footer">&copy; 2026 &middot; the.tsarevna &middot; Все права защищены</footer>
+</body>
+</html>
