@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Шаг 2 · Сайт, программа, урок — Алёна</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700;800&family=DM+Sans:ital@1&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root { --accent: #9C5F6A; --bg: #FBF7F5; --text: #332A2E; --muted: #5E5257; --block: #F4ECEA; --card: #F7F1EF; --card-border: #E8DCD8; --tip: #EFE4E1; --line: #EFE6E3; }
+body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); font-size: 17px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+.nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 48px; border-bottom: 1px solid var(--line); position: sticky; top: 0; background: var(--bg); z-index: 100; }
+.nav__mono { font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; font-size: 22px; color: var(--accent); text-decoration: none; }
+.nav__logo-name { font-family: 'DM Sans', sans-serif; font-size: 14px; font-style: italic; color: #9A8A8E; letter-spacing: .5px; }
+.container { max-width: 740px; margin: 0 auto; padding: 0 24px; }
+.hero { padding: 60px 0 40px; }
+.badge { display: inline-block; font-size: 11px; font-weight: 600; color: var(--accent); border: 1px solid var(--accent); padding: 5px 16px; margin-bottom: 20px; letter-spacing: 2px; text-transform: uppercase; }
+.hero h1 { font-family: 'Libre Baskerville', Georgia, serif; font-size: 38px; font-weight: 700; line-height: 1.25; margin-bottom: 16px; }
+.hero h1 em { font-style: italic; color: var(--accent); }
+.hero__desc { font-size: 18px; color: var(--muted); line-height: 1.7; }
+.hero__meta { font-size: 14px; color: #A3949A; margin-top: 16px; letter-spacing: 1px; }
+.section-heading { font-family: 'Libre Baskerville', Georgia, serif; font-size: 30px; font-weight: 700; line-height: 1.3; padding: 56px 0 20px; border-top: 1px solid var(--card-border); }
+.section-heading span { color: var(--accent); margin-right: 8px; }
+.section-heading em { font-style: italic; color: var(--accent); }
+.section-lead { font-size: 17px; color: var(--muted); margin-bottom: 20px; }
+.highlight { background: var(--block); padding: 20px 24px; margin: 24px 0; font-size: 16px; line-height: 1.75; color: var(--muted); }
+.highlight strong { color: var(--text); }
+.sub-heading { font-family: 'Libre Baskerville', Georgia, serif; font-size: 22px; font-weight: 700; padding: 32px 0 14px; }
+.text { font-size: 17px; color: var(--muted); margin-bottom: 16px; }
+.guide-list { list-style: none; margin: 12px 0 24px; }
+.guide-list li { font-size: 16px; line-height: 1.75; color: var(--muted); padding: 8px 0 8px 20px; position: relative; border-bottom: 1px solid var(--line); }
+.guide-list li:last-child { border-bottom: none; }
+.guide-list li::before { content: ''; position: absolute; left: 0; top: 16px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.guide-list li strong { color: var(--text); }
+.prompt-box { background: var(--block); padding: 28px 32px; margin: 24px 0; }
+.prompt-box__title { font-family: 'Libre Baskerville', Georgia, serif; font-size: 18px; font-weight: 700; color: var(--accent); margin-bottom: 4px; }
+.prompt-box__text { font-size: 15px; line-height: 1.8; color: var(--muted); white-space: pre-wrap; }
+.scenario-card { border: 1px solid var(--card-border); padding: 28px 32px; margin: 24px 0; background: var(--card); }
+.scenario-card__num { font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; font-size: 14px; color: var(--accent); letter-spacing: 1px; margin-bottom: 8px; }
+.scenario-card__title { font-family: 'Libre Baskerville', Georgia, serif; font-size: 20px; font-weight: 700; line-height: 1.4; margin-bottom: 16px; }
+.scenario-card__point { margin-bottom: 12px; font-size: 15.5px; color: var(--muted); line-height: 1.7; }
+.scenario-card__point strong { color: var(--text); font-weight: 600; }
+.scenario-card__tip { background: var(--tip); padding: 14px 18px; margin-top: 16px; font-size: 14px; color: var(--muted); line-height: 1.65; }
+.scenario-card__tip strong { color: var(--accent); }
+.btn-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 8px; }
+.btn { display: inline-block; text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 12px 20px; border: 1px solid var(--accent); color: var(--accent); background: transparent; transition: .15s; }
+.btn:hover { background: var(--accent); color: #fff; }
+.btn--primary { background: var(--accent); color: #fff; }
+.btn--primary:hover { background: #7D4A54; }
+table { width: 100%; border-collapse: collapse; margin: 16px 0 28px; font-size: 15px; }
+th, td { text-align: left; vertical-align: top; padding: 12px 12px; border-bottom: 1px solid var(--line); line-height: 1.55; }
+th { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: #A3949A; font-weight: 600; border-bottom: 1px solid var(--card-border); }
+td strong { color: var(--text); }
+.table-wrap { overflow-x: auto; }
+.toc { background: var(--card); border: 1px solid var(--card-border); padding: 28px 32px; margin: 8px 0 24px; }
+.toc__title { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #A3949A; font-weight: 600; margin-bottom: 14px; }
+.toc ol { list-style: none; counter-reset: toc; }
+.toc li { counter-increment: toc; padding: 7px 0; border-bottom: 1px solid var(--line); font-size: 15.5px; }
+.toc li:last-child { border-bottom: none; }
+.toc li::before { content: counter(toc, decimal-leading-zero) '.'; font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; color: var(--accent); margin-right: 12px; }
+.toc a { color: var(--text); text-decoration: none; font-weight: 500; }
+.toc a:hover { color: var(--accent); }
+.check { list-style: none; margin: 12px 0 24px; }
+.check li { position: relative; padding: 8px 0 8px 32px; font-size: 16px; color: var(--muted); border-bottom: 1px solid var(--line); }
+.check li::before { content: ''; position: absolute; left: 0; top: 13px; width: 16px; height: 16px; border: 1.5px solid var(--accent); }
+.check li strong { color: var(--text); }
+.quote { font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; font-size: 18px; color: var(--text); border-left: 3px solid var(--accent); padding: 6px 0 6px 20px; margin: 20px 0; line-height: 1.6; }
+.footer { text-align: center; padding: 64px 24px; border-top: 1px solid var(--card-border); margin-top: 64px; color: #A3949A; font-size: 14px; }
+@media screen and (max-width: 768px) { .nav { padding: 16px 20px; } .hero h1 { font-size: 28px; } .section-heading { font-size: 24px; } .scenario-card, .prompt-box, .toc { padding: 20px; } }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav__mono" href="index.html">Ц</a>
+  <span class="nav__logo-name">the.tsarevna</span>
+</nav>
+
+<div class="container">
+
+<section class="hero">
+  <div class="badge">Шаг 2 · Продукт</div>
+  <h1>Сайт, программа и урок: <em>«Отпусти тело»</em> готов к сборке</h1>
+  <p class="hero__desc">Три документа, из которых собирается продающая система трипваера: полные тексты лендинга, устройство программы на 21 день и сценарий продающего видеоурока с таймингом. Всё написано твоим голосом и пропущено через твои фильтры: без медицинских обещаний, без гарантий, всё лёжа и слушая.</p>
+  <p class="hero__meta">14 БЛОКОВ САЙТА · ПЛАН 21 ДНЯ · УРОК 23 МИНУТЫ</p>
+</section>
+
+<div class="toc">
+  <div class="toc__title">Что внутри шага 2</div>
+  <ol>
+    <li><a href="#s1">Наполнение сайта: 14 блоков, готовые тексты</a></li>
+    <li><a href="#s2">Программа: как набор практик становится продуктом</a></li>
+    <li><a href="#s3">Продающий видеоурок: сценарий с таймингом</a></li>
+    <li><a href="#s4">Что решить тебе — 5 вопросов</a></li>
+    <li><a href="#s5">Как это собрать: порядок работ</a></li>
+  </ol>
+</div>
+
+<div class="btn-row">
+  <a class="btn btn--primary" href="downloads/files/content/step2-site-copy.md" download>Тексты сайта</a>
+  <a class="btn" href="downloads/files/content/step2-program.md" download>Программа</a>
+  <a class="btn" href="downloads/files/content/step2-lesson-script.md" download>Сценарий урока</a>
+</div>
+
+<!-- ============================================================ -->
+<h2 class="section-heading" id="s1"><span>01.</span>Сайт: <em>14 блоков</em>, каждый со своей работой</h2>
+<p class="section-lead">Структура взята с эталонного продуктового лендинга и переведена в твои рамки. Логика страницы: узнавание → переворот «это не…» → механика → путь по дням → состав → доверие → тарифы. Продаёт не давление, а точность попадания.</p>
+
+<div class="table-wrap"><table>
+  <tr><th>Блок</th><th>Задача</th><th>Ключевая строка</th></tr>
+  <tr><td><strong>1. Первый экран</strong></td><td>Суть за 5 секунд + бесплатный вход</td><td>«Ничего не надо делать. Надо перестать делать»</td></tr>
+  <tr><td><strong>2. «Тебе знакомо?»</strong></td><td>Узнавание по 8 бытовым симптомам</td><td>«Ты не ленивая и не сломанная»</td></tr>
+  <tr><td><strong>3. «Это не…»</strong></td><td>Снять ложные ожидания: не зарядка, не медитация, не мотивация, не лечение</td><td>«Максимум усилий — нажать плей»</td></tr>
+  <tr><td><strong>4. Механика</strong></td><td>Почему «просто расслабься» не работает: цепочка тело → тревога → болотце</td><td>«Тебя не сломали — тебя зажали»</td></tr>
+  <tr><td><strong>5. 21 день</strong></td><td>Чего ждать по неделям — от первого лица, без обещаний</td><td>«Первым изменился вечер»</td></tr>
+  <tr><td><strong>6. Состав</strong></td><td>5 позиций, у каждой — «что тебе это даст»</td><td>—</td></tr>
+  <tr><td><strong>7. Путь 01–04</strong></td><td>Бесплатно → проверь на себе → 990 ₽ → план</td><td>«Тело ответит честнее любых отзывов»</td></tr>
+  <tr><td><strong>8. Кому подходит / кому нет</strong></td><td>Честность вместо гарантии + дисклеймер</td><td>«Сначала врач, потом практики»</td></tr>
+  <tr><td><strong>9. Кто я</strong></td><td>История + образование между делом</td><td>«Я на шаг впереди, а не на вершине»</td></tr>
+  <tr><td><strong>10. Отзывы</strong></td><td>3 реальных, с честной подписью</td><td>«будто из-под завала полезли желания»</td></tr>
+  <tr><td><strong>11. Сравнение</strong></td><td>«Ты уже пробовала» — общий знаменатель провалов</td><td>«Тело либо не участвовало, либо напрягалось»</td></tr>
+  <tr><td><strong>12. FAQ</strong></td><td>6 возражений, включая «это точно не эзотерика?»</td><td>—</td></tr>
+  <tr><td><strong>13. Тарифы</strong></td><td>0 ₽ / 990 ₽ / вариант с разбором</td><td>Честная срочность: 990 → 1490</td></tr>
+  <tr><td><strong>14. Финал</strong></td><td>Правило тона + одна кнопка</td><td>«С тобой всё в порядке»</td></tr>
+</table></div>
+
+<div class="highlight"><strong>Чем это отличается от эталона, с которого бралась структура.</strong> Там продавали через медицинские обещания («вылечите за 1–2 месяца», «нормализуются показатели») и 100%-й возврат денег. У тебя это запрещено доказательной папкой — и это не слабость, а позиция: вместо гарантий работает бесплатный вход («проверь на себе сегодня вечером»), вместо обещаний — твоя история и слова клиенток. Это продаёт не хуже, а дольше: без риска и без разочарованных.</div>
+
+<h3 class="sub-heading">Первый экран — как он будет звучать</h3>
+<div class="prompt-box"><div class="prompt-box__title">Отпусти тело</div><div class="prompt-box__text">5 практик, которые учат тело отпускать напряжение, которое ты держишь годами. Дальше тело начинает работать на тебя, а не против.
+
+Ничего не надо делать. Надо перестать делать.
+Просто ляг и послушай — вечером, после работы или когда накрыло.
+
+[Попробовать бесплатно] — первые 5 минут практики + видеоурок
+990 ₽ · после сборки полной версии — 1490 ₽</div></div>
+
+<!-- ============================================================ -->
+<h2 class="section-heading" id="s2"><span>02.</span>Программа: <em>план 21 дня</em> вместо папки с аудио</h2>
+<p class="section-lead">Главная разница между «набором аудио» и продуктом, который доводят до конца, — план. Каждая участница знает, что слушать сегодня и почему в таком порядке. Порядок — твой алгоритм: сначала разрядить, потом расслаблять, потом желания.</p>
+
+<div class="table-wrap"><table>
+  <tr><th>Дни</th><th>Фаза</th><th>Что делает участница</th></tr>
+  <tr><td><strong>1</strong></td><td>Старт</td><td>Аудио «как слушать» + вечерняя практика + вечерняя страница. Один вечер — один ритуал</td></tr>
+  <tr><td><strong>2–7</strong></td><td>Разгрузка</td><td>Вечерняя практика ежедневно; задача — выгрузить голову и вернуть вечер</td></tr>
+  <tr><td><strong>8–14</strong></td><td>Тело учится отпускать</td><td>+ «когда накрыло» по ситуации, утренняя 2–3 раза; острые моменты — в практику, а не в срыв</td></tr>
+  <tr><td><strong>15–21</strong></td><td>Желания</td><td>Йога-нидра с намерением через день: желание проживается телом, в настоящем времени</td></tr>
+  <tr><td><strong>21+</strong></td><td>Навык</td><td>Свободный режим; на 21-й день бот собирает отклик — это и кейсы, и мостик дальше</td></tr>
+</table></div>
+
+<ul class="guide-list">
+  <li><strong>Правила без вины.</strong> Уснула во время практики — засчитывается. Пропустила день — просто продолжаешь. Чувство вины здесь не инструмент.</li>
+  <li><strong>Сбор кейсов вшит в продукт.</strong> На 21-й день — три вопроса (вечер/сон · тело · что удивило). Ответы с разрешения — на сайт с пометкой «о наборе».</li>
+  <li><strong>Тарифы:</strong> бесплатно (5 минут + урок) · «Отпусти тело» 990 ₽ → 1490 ₽ · вариант «+ личный разбор по итогам 21 дня» — на твоё решение, ориентир 2 990 ₽ и максимум 10–15 мест в месяц.</li>
+  <li><strong>Что записать:</strong> 5 коротких видео (можно одним днём, батчем) + перезаписать аудио в нормальном качестве. Список видео с темами — в документе программы.</li>
+</ul>
+
+<!-- ============================================================ -->
+<h2 class="section-heading" id="s3"><span>03.</span>Видеоурок: <em>23 минуты</em>, которые продают без давления</h2>
+<p class="section-lead">Сценарий собран на твоей же утверждённой структуре лид-магнита (9 блоков, стоп-лист соблюдён) и усилен приёмами эталонного продающего урока: две ситуации в заходе, два ряда причин, истории вместо теории, честный призыв без фальшивых дедлайнов.</p>
+
+<div class="table-wrap"><table>
+  <tr><th>Время</th><th>Блок</th><th>Что происходит</th></tr>
+  <tr><td>0:00–1:30</td><td><strong>Остановить внимание</strong></td><td>«Ты не ленивая и не сломанная» + обещание урока и удержание до конца</td></tr>
+  <tr><td>1:30–3:00</td><td><strong>Доказательство</strong></td><td>Слова клиенток на экране: «из-под завала полезли желания»</td></tr>
+  <tr><td>3:00–8:00</td><td><strong>Твоя история</strong></td><td>Точка А → поворот → сцена, где сработало тело → рождение метода → мостик честности («учу расслабляться с плечами у ушей 🤡»)</td></tr>
+  <tr><td>8:00–11:00</td><td><strong>Три ошибки</strong></td><td>Расслабляться усилием · начинать с середины · бросать после первого раза</td></tr>
+  <tr><td>11:00–14:00</td><td><strong>Решение</strong></td><td>Цепочка-механика + пять шагов метода + «начинается с одного вечера»</td></tr>
+  <tr><td>14:00–17:00</td><td><strong>Продукт</strong></td><td>«Отпусти тело»: состав с «что тебе это даст», «это плеер у кровати»</td></tr>
+  <tr><td>17:00–19:00</td><td><strong>Цена</strong></td><td>Сколько стоит не решать · альтернативы · 990 ₽ = треть массажа, но навсегда</td></tr>
+  <tr><td>19:00–21:30</td><td><strong>Возражения</strong></td><td>5 главных, включая «это точно не эзотерика?»</td></tr>
+  <tr><td>21:30–23:00</td><td><strong>Призыв</strong></td><td>«Ты двадцать лет была сильной. Может, пора побыть живой» → одна кнопка, бесплатные 5 минут</td></tr>
+</table></div>
+
+<div class="highlight"><strong>Стоп-лист проверен по всему сценарию:</strong> без YouTube и книг, без терапии, без «состояния» и «Вселенной», без запрещённых терминов, без гарантий и сроков, без возврата денег, результаты только от первого лица, ни одного упражнения.</div>
+
+<!-- ============================================================ -->
+<h2 class="section-heading" id="s4"><span>04.</span>Что решить <em>тебе</em> — 5 вопросов</h2>
+<ul class="check">
+  <li><strong>Третий тариф «+ разбор» (≈2 990 ₽):</strong> запускаем сразу или после первых 15 откликов?</li>
+  <li><strong>Даты записи:</strong> перезапись аудиопрактик и батч-съёмка 5 видео + урока — один-два дня.</li>
+  <li><strong>Техника:</strong> какой конструктор бота с оплатой, где лежат файлы (закрытый канал?).</li>
+  <li><strong>Юрформа</strong> для приёма оплат (самозанятость?).</li>
+  <li><strong>Публичная дата повышения</strong> 990 → 1490 ₽ — когда полная версия считается собранной.</li>
+</ul>
+
+<!-- ============================================================ -->
+<h2 class="section-heading" id="s5"><span>05.</span>Как это <em>собрать</em>: порядок работ</h2>
+<div class="table-wrap"><table>
+  <tr><th>#</th><th>Что</th><th>Чем</th></tr>
+  <tr><td>1</td><td>Ответить на 5 вопросов выше</td><td>Созвон с Майей</td></tr>
+  <tr><td>2</td><td>Записать урок по сценарию (суфлёр) и 5 видео батчем</td><td>Сценарий из этого шага</td></tr>
+  <tr><td>3</td><td>Собрать страницу из текстов сайта</td><td>Скилл <code>/guide</code> (режим лендинга, твоя палитра) — «возьми ~/alena-setup/content/step2-site-copy.md и собери лендинг»</td></tr>
+  <tr><td>4</td><td>Собрать PDF-план 21 дня</td><td>Скилл <code>/guide</code> из step2-program.md</td></tr>
+  <tr><td>5</td><td>Собрать цепочку бота: 5 минут бесплатно → урок → оффер → дожим</td><td>Скилл <code>/tg-funnel</code></td></tr>
+  <tr><td>6</td><td>Запустить reels на трипваер</td><td>Банк идей + <code>/reels-expert</code></td></tr>
+</table></div>
+
+<div class="prompt-box"><div class="prompt-box__title">Фраза для Claude, когда будешь собирать страницу</div><div class="prompt-box__text">/guide — собери лендинг продукта из ~/alena-setup/content/step2-site-copy.md: все 14 блоков по порядку, моя палитра, кнопки ведут в бота [ссылка]. Пометки 🔴 покажи мне списком до сборки.</div></div>
+
+<div class="btn-row">
+  <a class="btn btn--primary" href="downloads/files/content/step2-site-copy.md" download>Тексты сайта (14 блоков)</a>
+  <a class="btn" href="downloads/files/content/step2-program.md" download>Программа 21 дня</a>
+  <a class="btn" href="downloads/files/content/step2-lesson-script.md" download>Сценарий урока</a>
+  <a class="btn" href="index.html">← Весь маршрут</a>
+</div>
+
+</div>
+
+<footer class="footer">© 2026 · maysoulme · Личная работа. Материалы не для передачи третьим лицам.</footer>
+
+</body>
+</html>
