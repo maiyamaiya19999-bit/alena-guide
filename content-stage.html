@@ -9,74 +9,69 @@
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700;800&family=DM+Sans:ital@1&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-:root { --accent: #9C5F6A; --bg: #FBF7F5; --text: #332A2E; --muted: #5E5257; --block: #F4ECEA; --card: #F7F1EF; --card-border: #E8DCD8; --tip: #EFE4E1; --line: #EFE6E3; }
-body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); font-size: 17px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
-.nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 48px; border-bottom: 1px solid var(--line); position: sticky; top: 0; background: var(--bg); z-index: 100; }
-.nav__mono { font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; font-size: 22px; color: var(--accent); text-decoration: none; }
-.nav__logo-name { font-family: 'DM Sans', sans-serif; font-size: 14px; font-style: italic; color: #9A8A8E; letter-spacing: .5px; }
+:root { --milk: #FDFCF9; --ink: #262220; --body: #55504B; --soft: #948C83; --bordo: #710C04; --hair: #E9E4DC; --wash: #F7F3EC; }
+body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--milk); color: var(--ink); font-size: 17px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+.nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 48px; border-bottom: 1px solid var(--hair); position: sticky; top: 0; background: var(--milk); z-index: 100; }
+.nav__mono { font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; font-size: 22px; color: var(--bordo); text-decoration: none; }
+.nav__logo-name { font-family: 'DM Sans', sans-serif; font-size: 14px; font-style: italic; color: var(--soft); letter-spacing: .5px; }
 .container { max-width: 740px; margin: 0 auto; padding: 0 24px; }
 .hero { padding: 60px 0 40px; }
-.badge { display: inline-block; font-size: 11px; font-weight: 600; color: var(--accent); border: 1px solid var(--accent); padding: 5px 16px; margin-bottom: 20px; letter-spacing: 2px; text-transform: uppercase; }
+.badge { display: inline-block; font-size: 11px; font-weight: 600; color: var(--bordo); border: 1px solid var(--bordo); padding: 5px 16px; margin-bottom: 20px; letter-spacing: 2px; text-transform: uppercase; }
 .hero h1 { font-family: 'Libre Baskerville', Georgia, serif; font-size: 38px; font-weight: 700; line-height: 1.25; margin-bottom: 16px; }
-.hero h1 em { font-style: italic; color: var(--accent); }
-.hero__desc { font-size: 18px; color: var(--muted); line-height: 1.7; }
-.hero__meta { font-size: 14px; color: #A3949A; margin-top: 16px; letter-spacing: 1px; }
-.section-heading { font-family: 'Libre Baskerville', Georgia, serif; font-size: 30px; font-weight: 700; line-height: 1.3; padding: 56px 0 20px; border-top: 1px solid var(--card-border); }
-.section-heading span { color: var(--accent); margin-right: 8px; }
-.section-heading em { font-style: italic; color: var(--accent); }
-.section-lead { font-size: 17px; color: var(--muted); margin-bottom: 20px; }
-.highlight { background: var(--block); padding: 20px 24px; margin: 24px 0; font-size: 16px; line-height: 1.75; color: var(--muted); }
-.highlight strong { color: var(--text); }
+.hero h1 em { font-style: italic; color: var(--bordo); }
+.hero__desc { font-size: 18px; color: var(--body); line-height: 1.7; }
+.hero__meta { font-size: 14px; color: var(--soft); margin-top: 16px; letter-spacing: 1px; }
+.section-heading { font-family: 'Libre Baskerville', Georgia, serif; font-size: 30px; font-weight: 700; line-height: 1.3; padding: 56px 0 20px; border-top: 1px solid var(--hair); }
+.section-heading span { color: var(--bordo); margin-right: 8px; }
+.section-heading em { font-style: italic; color: var(--bordo); }
+.section-lead { font-size: 17px; color: var(--body); margin-bottom: 20px; }
+.highlight { background: var(--wash); padding: 20px 24px; margin: 24px 0; font-size: 16px; line-height: 1.75; color: var(--body); }
+.highlight strong { color: var(--ink); }
 .sub-heading { font-family: 'Libre Baskerville', Georgia, serif; font-size: 22px; font-weight: 700; padding: 32px 0 14px; }
-.text { font-size: 17px; color: var(--muted); margin-bottom: 16px; }
-.text strong { color: var(--text); }
-.guide-list { list-style: none; margin: 12px 0 24px; }
-.guide-list li { font-size: 16px; line-height: 1.75; color: var(--muted); padding: 8px 0 8px 20px; position: relative; border-bottom: 1px solid var(--line); }
-.guide-list li:last-child { border-bottom: none; }
-.guide-list li::before { content: ''; position: absolute; left: 0; top: 16px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
-.guide-list li strong { color: var(--text); }
-.prompt-box { background: var(--block); padding: 24px 28px; margin: 20px 0; }
-.prompt-box__title { font-family: 'Libre Baskerville', Georgia, serif; font-size: 17px; font-weight: 700; color: var(--accent); margin-bottom: 4px; }
-.prompt-box__text { font-size: 15px; line-height: 1.8; color: var(--muted); white-space: pre-wrap; }
-.step { display: flex; gap: 20px; padding: 18px 0; border-bottom: 1px solid var(--line); }
-.step__num { font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; font-size: 28px; color: var(--accent); opacity: .4; min-width: 42px; line-height: 1.1; }
+.text { font-size: 17px; color: var(--body); margin-bottom: 16px; }
+.text strong { color: var(--ink); }
+.step { display: flex; gap: 20px; padding: 18px 0; border-bottom: 1px solid var(--hair); }
+.step__num { font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; font-size: 28px; color: var(--bordo); opacity: .35; min-width: 42px; line-height: 1.1; }
 .step__body { flex: 1; }
-.step__title { font-weight: 600; font-size: 16.5px; color: var(--text); margin-bottom: 4px; }
-.step__text { font-size: 15.5px; color: var(--muted); line-height: 1.7; }
-.step__text code, .text code, li code, td code { font-family: ui-monospace, Menlo, monospace; font-size: 14px; background: var(--tip); padding: 1px 6px; }
+.step__title { font-weight: 600; font-size: 16.5px; color: var(--ink); margin-bottom: 4px; }
+.step__text { font-size: 15.5px; color: var(--body); line-height: 1.7; }
+.step__text code, .text code, td code { font-family: ui-monospace, Menlo, monospace; font-size: 14px; background: var(--wash); padding: 1px 6px; }
+.prompt-box { background: var(--wash); padding: 24px 28px; margin: 20px 0; }
+.prompt-box__title { font-family: 'Libre Baskerville', Georgia, serif; font-size: 17px; font-weight: 700; color: var(--bordo); margin-bottom: 4px; }
+.prompt-box__text { font-size: 15px; line-height: 1.8; color: var(--body); white-space: pre-wrap; }
 table { width: 100%; border-collapse: collapse; margin: 16px 0 28px; font-size: 15px; }
-th, td { text-align: left; vertical-align: top; padding: 12px 12px; border-bottom: 1px solid var(--line); line-height: 1.55; }
-th { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: #A3949A; font-weight: 600; border-bottom: 1px solid var(--card-border); }
-td strong { color: var(--text); }
+th, td { text-align: left; vertical-align: top; padding: 12px 12px; border-bottom: 1px solid var(--hair); line-height: 1.55; }
+th { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--soft); font-weight: 600; border-bottom: 1px solid var(--hair); }
+td strong { color: var(--ink); }
 .table-wrap { overflow-x: auto; }
 .btn-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 8px; }
-.btn { display: inline-block; text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 12px 20px; border: 1px solid var(--accent); color: var(--accent); background: transparent; transition: .15s; }
-.btn:hover { background: var(--accent); color: #fff; }
-.btn--primary { background: var(--accent); color: #fff; }
-.btn--primary:hover { background: #7D4A54; }
-details.reel { border: 1px solid var(--card-border); background: var(--card); margin: 14px 0; }
+.btn { display: inline-block; text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 12px 20px; border: 1px solid var(--bordo); color: var(--bordo); background: transparent; transition: .15s; }
+.btn:hover { background: var(--bordo); color: #fff; }
+.btn--primary { background: var(--bordo); color: #fff; }
+.btn--primary:hover { background: #4d0803; }
+details.reel { border: 1px solid var(--hair); background: #fff; margin: 14px 0; }
 details.reel summary { cursor: pointer; list-style: none; padding: 18px 24px; display: flex; align-items: baseline; gap: 14px; }
 details.reel summary::-webkit-details-marker { display: none; }
-details.reel summary .n { font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; color: var(--accent); font-size: 18px; min-width: 26px; }
-details.reel summary .t { font-family: 'Libre Baskerville', Georgia, serif; font-weight: 700; font-size: 17px; color: var(--text); flex: 1; }
-details.reel summary .hint { font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); white-space: nowrap; }
+details.reel summary .n { font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; color: var(--bordo); font-size: 18px; min-width: 26px; }
+details.reel summary .t { font-family: 'Libre Baskerville', Georgia, serif; font-weight: 700; font-size: 17px; color: var(--ink); flex: 1; }
+details.reel summary .hint { font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--bordo); white-space: nowrap; }
 details.reel[open] summary .hint { display: none; }
-details.reel .body { padding: 0 24px 22px; border-top: 1px solid var(--line); }
-details.reel .body p { font-size: 16px; line-height: 1.85; color: #4A4145; margin-top: 14px; }
-details.reel .body .cta-p { color: var(--accent); font-weight: 500; }
+details.reel .body { padding: 0 24px 22px; border-top: 1px solid var(--hair); }
+details.reel .body p { font-size: 16px; line-height: 1.85; color: #4a453f; margin-top: 14px; }
+details.reel .body .cta-p { color: var(--bordo); font-weight: 500; }
 .check { list-style: none; margin: 12px 0 24px; }
-.check li { position: relative; padding: 8px 0 8px 32px; font-size: 16px; color: var(--muted); border-bottom: 1px solid var(--line); }
-.check li::before { content: ''; position: absolute; left: 0; top: 13px; width: 16px; height: 16px; border: 1.5px solid var(--accent); }
-.check li strong { color: var(--text); }
-.footer { text-align: center; padding: 64px 24px; border-top: 1px solid var(--card-border); margin-top: 64px; color: #A3949A; font-size: 14px; }
+.check li { position: relative; padding: 8px 0 8px 32px; font-size: 16px; color: var(--body); border-bottom: 1px solid var(--hair); }
+.check li::before { content: ''; position: absolute; left: 0; top: 13px; width: 16px; height: 16px; border: 1.5px solid var(--bordo); }
+.check li strong { color: var(--ink); }
+.footer { text-align: center; padding: 64px 24px; border-top: 1px solid var(--hair); margin-top: 64px; color: var(--soft); font-size: 14px; }
 @media screen and (max-width: 768px) { .nav { padding: 16px 20px; } .hero h1 { font-size: 28px; } .section-heading { font-size: 24px; } .prompt-box { padding: 18px; } details.reel summary, details.reel .body { padding-left: 16px; padding-right: 16px; } }
 </style>
 </head>
 <body>
 
 <nav class="nav">
-  <a class="nav__mono" href="index.html">Ц</a>
-  <span class="nav__logo-name">the.tsarevna</span>
+  <a class="nav__mono" href="index.html">А</a>
+  <span class="nav__logo-name">Алёна · телесные практики и психология</span>
 </nav>
 
 <div class="container">
@@ -84,7 +79,7 @@ details.reel .body .cta-p { color: var(--accent); font-weight: 500; }
 <section class="hero">
   <div class="badge">Этап · Контент-машина</div>
   <h1>Контент, который <em>сам ведёт в воронку</em></h1>
-  <p class="hero__desc">Фундамент готов, воронка собирается, профиль упакован — включаем продвижение. На этой странице: как устроена твоя система контента, все скиллы этого этапа, 10 готовых сценариев reels под суфлёр, 3 карусели с дизайном, инструкция к парсеру и связка «табличка парсера → готовый сценарий одной фразой».</p>
+  <p class="hero__desc">Интенсив «Женщина, которую выбирают» готов, продающий урок и упаковка блога — тоже. Включаем продвижение: каждый ролик и каждая карусель ведут на бесплатный урок, урок продаёт интенсив. На этой странице — вся система: скиллы этапа, 10 готовых сценариев reels под суфлёр, 3 карусели с дизайном, инструкция к парсеру и связка «табличка парсера → готовый сценарий одной фразой».</p>
   <p class="hero__meta">10 СЦЕНАРИЕВ · 3 КАРУСЕЛИ · ПАРСЕР · 1 РОЛИК В ДЕНЬ</p>
 </section>
 
@@ -92,201 +87,170 @@ details.reel .body .cta-p { color: var(--accent); font-weight: 500; }
   <a class="btn btn--primary" href="downloads/files/content/viral-reels-10.md" download>10 сценариев (файл)</a>
   <a class="btn" href="downloads/files/content/carousels-3.md" download>3 карусели (файл)</a>
   <a class="btn" href="downloads/files/parser/PARSER-GUIDE.md" download>Гайд по парсеру</a>
-  <a class="btn" href="index.html">← Весь маршрут</a>
+  <a class="btn" href="https://maiyamaiya19999-bit.github.io/maysoulme-assets/alena-intensiv.html">Страница интенсива</a>
 </div>
 
 <!-- ============================================================ -->
-<h2 class="section-heading"><span>01.</span>Логика системы: <em>один недельный цикл</em></h2>
-<p class="section-lead">Вся контент-машина — это один повторяющийся цикл. Ты не «придумываешь контент», ты крутишь колесо:</p>
+<h2 class="section-heading"><span>01.</span>Куда всё ведёт: <em>одна воронка</em></h2>
+<p class="section-lead">Каждая единица контента делает один и тот же ход:</p>
+<div class="highlight"><strong>Reels / карусель / пост → бесплатный подробный урок (ссылка в шапке или кодовое слово) → интенсив «Женщина, которую выбирают».</strong><br>Поэтому в сценариях нет цен и названий тарифов — продаёт урок, а контент только приводит на него. Что бы мы ни меняли в цене или составе интенсива, ролики не устареют.</div>
 
-<div class="step"><div class="step__num">1</div><div class="step__body"><div class="step__title">Понедельник · Парсер (30 минут)</div><div class="step__text">Запускаешь анализ по своим конкурентам → смотришь топ роликов за 7 дней по комментариям → выбираешь 5–7 и жмёшь «Взять в работу» — парсер сам сделает транскрибации.</div></div></div>
-<div class="step"><div class="step__num">2</div><div class="step__body"><div class="step__title">Понедельник · Сценарии (час с Claude)</div><div class="step__text">Каждую транскрибацию скармливаешь Claude одной фразой (блок 04 ниже) — он уникализирует под тебя: твой метод, твой голос, твои границы, CTA в твою воронку. Не хватило из парсера — добираешь из банка 35 идей или из 10 готовых ниже.</div></div></div>
-<div class="step"><div class="step__num">3</div><div class="step__body"><div class="step__title">Вторник · Батч-съёмка (1,5–2 часа)</div><div class="step__text">Все 7 роликов подряд через суфлёр. Один свет, один фон, единая обложка.</div></div></div>
-<div class="step"><div class="step__num">4</div><div class="step__body"><div class="step__title">Всю неделю · Публикация</div><div class="step__text">1 ролик в день (можно начать с 3–4 в неделю). Пропорция: 4 объясняющих : 1 личный. Каждый ролик ведёт в шапку — на бесплатные 5 минут практики.</div></div></div>
-<div class="step"><div class="step__num">5</div><div class="step__body"><div class="step__title">Параллельно · Telegram</div><div class="step__text">2–3 длинных поста в неделю через <code>/tg</code> (он видит всю историю канала и не повторяет темы). Раз в 1–2 недели — карусель. Когда назначим дату запуска — <code>/progrev</code> соберёт стратегию прогрева по дням.</div></div></div>
-
-<div class="highlight"><strong>Главное правило этапа:</strong> контент не продаёт продукт напрямую — он ведёт на бесплатный вход воронки (урок + 5 минут практики). Продаёт воронка. Поэтому в сценариях нет цен: они не устареют, что бы мы ни меняли в продукте.</div>
+<h3 class="sub-heading">Недельный цикл</h3>
+<div class="step"><div class="step__num">1</div><div class="step__body"><div class="step__title">Понедельник · Парсер (30 минут)</div><div class="step__text">Запускаешь анализ по конкурентам → топ роликов за 7 дней по комментариям → 5–7 лучших «Взять в работу», парсер сам сделает транскрибации.</div></div></div>
+<div class="step"><div class="step__num">2</div><div class="step__body"><div class="step__title">Понедельник · Сценарии (час с Claude)</div><div class="step__text">Каждую транскрибацию — во фразу-конвертер (блок 03): Claude уникализирует под тебя и твою воронку. Не хватило — добираешь из 10 готовых ниже или банка идей.</div></div></div>
+<div class="step"><div class="step__num">3</div><div class="step__body"><div class="step__title">Вторник · Батч-съёмка (1,5–2 часа)</div><div class="step__text">Все ролики подряд через суфлёр. Один свет, один фон, единая обложка на молочном фоне.</div></div></div>
+<div class="step"><div class="step__num">4</div><div class="step__body"><div class="step__title">Всю неделю · Публикация</div><div class="step__text">1 ролик в день (старт можно с 3–4 в неделю). Пропорция 4 объясняющих : 1 личный. Подпись везде: «Бесплатный подробный урок — в шапке 🤍».</div></div></div>
+<div class="step"><div class="step__num">5</div><div class="step__body"><div class="step__title">Параллельно · Telegram</div><div class="step__text">2–3 поста в неделю через <code>/tg</code> (он видит всю историю канала и не повторяет темы) — темы постов уже расписаны на странице интенсива в блоке упаковки. Раз в 1–2 недели — карусель. К запуску потока — <code>/progrev</code> соберёт прогрев по дням.</div></div></div>
 
 <!-- ============================================================ -->
-<h2 class="section-heading"><span>02.</span>Скиллы этапа — <em>всё уже настроено под тебя</em></h2>
-<p class="section-lead">Эти скиллы стоят у тебя с установки пакета (проверь фразой: «покажи список файлов в ~/.claude/commands»). Каждый знает твой профиль, голос, границы и продукт.</p>
-
+<h2 class="section-heading"><span>02.</span>Скиллы этапа — <em>всё уже настроено</em></h2>
 <div class="table-wrap"><table>
-  <tr><th>Скилл</th><th>Что делает</th><th>Фраза для Claude</th></tr>
-  <tr><td><code>/reels-expert</code></td><td>Объясняющий ролик: из твоей мысли или адаптация залётного из парсера</td><td>«/reels-expert — мысль: … Собери ролик под суфлёр»</td></tr>
-  <tr><td><code>/reels-story</code></td><td>Ролик с твоей личной историей (сцены-якоря уже внутри)</td><td>«/reels-story — сцена: … Ролик на 45 секунд»</td></tr>
-  <tr><td><code>/tg</code></td><td>Продюсер Telegram-канала: видит всю историю постов, предлагает темы, пишет твоим ритмом</td><td>«/tg — предложи 5 тем на неделю и напиши первый пост»</td></tr>
-  <tr><td><code>/tg-posts</code></td><td>Длинные посты твоим голосом (длинные фразы, короткие строки)</td><td>«/tg-posts — личный пост про …»</td></tr>
-  <tr><td><code>/stories</code></td><td>Сторителлинг 6–8 сторис из поста — опциональный, по твоей команде</td><td>«/stories — сделай сторителлинг из этого поста: …»</td></tr>
-  <tr><td><code>/progrev</code></td><td>Стратегия прогрева по дням к запуску, без давления</td><td>«/progrev — собери прогрев к дате …»</td></tr>
-  <tr><td><code>/carousel</code></td><td>Карусель 1080×1350 в твоём дизайне (пыльная роза, Libre Baskerville)</td><td>«/carousel — собери карусель по сценарию … из carousels-3.md»</td></tr>
-  <tr><td><code>/presentation</code></td><td>Слайды 60/40 — с местом под твоё видео (для уроков)</td><td>«/presentation — слайды к уроку по этому сценарию: …»</td></tr>
-  <tr><td><code>/presentation-full</code></td><td>Широкие слайды на весь экран + PDF (эфиры, вебинары)</td><td>«/presentation-full — презентация по …»</td></tr>
-  <tr><td><code>/guide</code></td><td>Гайды, чек-листы, лендинги, страницы — в твоём стиле</td><td>«/guide — оформи чек-лист … и сохрани в ~/Desktop/алёна/…»</td></tr>
+  <tr><th>Скилл</th><th>Что делает</th><th>Фраза</th></tr>
+  <tr><td><code>/reels-expert</code></td><td>Объясняющий ролик: из мысли или адаптация залётного из парсера</td><td>«/reels-expert — мысль: … Ролик под суфлёр, CTA — бесплатный урок»</td></tr>
+  <tr><td><code>/reels-story</code></td><td>Ролик с личной историей (сцены-якоря внутри)</td><td>«/reels-story — сцена: зимняя остановка… 45 секунд»</td></tr>
+  <tr><td><code>/tg</code></td><td>Продюсер Telegram-канала со всей историей постов</td><td>«/tg — предложи 5 тем на неделю и напиши первую»</td></tr>
+  <tr><td><code>/tg-posts</code></td><td>Длинные посты твоим голосом</td><td>«/tg-posts — пост №7 из списка на странице интенсива»</td></tr>
+  <tr><td><code>/stories</code></td><td>Сторителлинг для актуальных (сценарии 5 актуальных — на странице интенсива)</td><td>«/stories — распиши актуальное „Начни здесь" по плану упаковки»</td></tr>
+  <tr><td><code>/progrev</code></td><td>Прогрев по дням к запуску потока</td><td>«/progrev — собери прогрев к дате …»</td></tr>
+  <tr><td><code>/carousel</code></td><td>Карусель 1080×1350 в стиле страницы интенсива</td><td>«/carousel — карусель 1 из carousels-3.md»</td></tr>
+  <tr><td><code>/presentation</code></td><td>Слайды 60/40 с местом под видео — для модулей интенсива</td><td>«/presentation — слайды к модулю 1»</td></tr>
+  <tr><td><code>/presentation-full</code></td><td>Широкие слайды + PDF — эфиры и вебинары</td><td>«/presentation-full — презентация по …»</td></tr>
+  <tr><td><code>/guide</code></td><td>Гайды, чек-листы, лендинги, страницы</td><td>«/guide — чек-лист к модулю 2»</td></tr>
   <tr><td><code>/voice-edit</code></td><td>Переписать любой текст твоим голосом</td><td>«/voice-edit — оживи этот текст: …»</td></tr>
-  <tr><td><code>/parser</code></td><td>Помощник по парсеру: запуск, разбор по ссылке, подбор конкурентов</td><td>«/parser — разбери этот ролик по ссылке: …»</td></tr>
+  <tr><td><code>/parser</code></td><td>Помощник по парсеру: запуск, разбор по ссылке, конкуренты</td><td>«/parser — разбери ролик по ссылке: …»</td></tr>
 </table></div>
 
 <!-- ============================================================ -->
-<h2 class="section-heading"><span>03.</span>Парсер: <em>инструкция</em> простыми словами</h2>
-<p class="section-lead">Парсер — твой источник идей. Он смотрит аккаунты конкурентов и показывает, какие их ролики реально залетели за последние 7 дней. Доступ у тебя уже есть; полный гайд по установке и настройке — кнопкой выше.</p>
+<h2 class="section-heading"><span>03.</span>Парсер: <em>инструкция</em> и фраза-конвертер</h2>
+<div class="step"><div class="step__num">1</div><div class="step__body"><div class="step__title">Открой веб-версию парсера</div><div class="step__text">Ссылка и пароль — у Майи (или локально: «/parser — запусти веб-версию»). Внутри: список блогеров, кнопки анализа, история прогонов.</div></div></div>
+<div class="step"><div class="step__num">2</div><div class="step__body"><div class="step__title">«Анализ Reels» — раз в неделю</div><div class="step__text">Парсер соберёт топ роликов конкурентов за 7 дней по комментариям (они честнее лайков) → новый лист в Google-таблице + сообщение в Telegram. Чаще раза в неделю не запускаем — лимит сервиса.</div></div></div>
+<div class="step"><div class="step__num">3</div><div class="step__body"><div class="step__title">«Взять в работу»</div><div class="step__text">Отметь 5–7 лучших — парсер создаст лист «🎯 В работе» и сам добавит транскрибации.</div></div></div>
+<div class="step"><div class="step__num">4</div><div class="step__body"><div class="step__title">«Разбор по ссылке»</div><div class="step__text">Увидела сильный ролик в ленте — вставь ссылку, получишь транскрибацию сразу.</div></div></div>
 
-<div class="step"><div class="step__num">1</div><div class="step__body"><div class="step__title">Открой веб-версию парсера</div><div class="step__text">Ссылка и пароль — у Майи (или локально на маке: скажи Claude «/parser — запусти веб-версию»). Интерфейс: список блогеров, две кнопки анализа, история прогонов.</div></div></div>
-<div class="step"><div class="step__num">2</div><div class="step__body"><div class="step__title">Нажми «Анализ Reels»</div><div class="step__text">Парсер пройдёт по всем аккаунтам из списка и соберёт топ роликов за 7 дней, отсортированный по комментариям (комментарии честнее лайков). Результат — новый лист в Google-таблице + сообщение в Telegram. Прогон занимает несколько минут — можно закрыть и вернуться.</div></div></div>
-<div class="step"><div class="step__num">3</div><div class="step__body"><div class="step__title">Выбери 5–7 роликов и нажми «Взять в работу»</div><div class="step__text">Отмечаешь галочками лучшие — парсер создаёт отдельный лист «🎯 В работе» и сам добавляет к каждому ролику транскрибацию (расшифровку речи) и подпись.</div></div></div>
-<div class="step"><div class="step__num">4</div><div class="step__body"><div class="step__title">Разбор по ссылке — для находок из ленты</div><div class="step__text">Увидела чужой сильный ролик сама? Вставь ссылку в поле «Разбор по ссылке» — получишь транскрибацию без ожидания общего анализа.</div></div></div>
-<div class="step"><div class="step__num">5</div><div class="step__body"><div class="step__title">Правила</div><div class="step__text">Запуск — раз в неделю, не чаще (лимит сервиса Apify обновляется раз в месяц). Берём у чужих роликов приём и структуру — факты, кейсы и истории всегда только твои.</div></div></div>
+<h3 class="sub-heading">Табличка → готовый сценарий под тебя</h3>
+<p class="text">Копируешь транскрибацию из колонки таблицы — и отправляешь Claude:</p>
+<div class="prompt-box"><div class="prompt-box__title">Фраза-конвертер (сохрани)</div><div class="prompt-box__text">/reels-expert — режим 1, адаптация залётного ролика. Вот транскрибация из парсера:
 
-<h3 class="sub-heading">Табличка → готовый сценарий: одной фразой</h3>
-<p class="text">Это главная связка этапа. Открываешь лист «🎯 В работе», копируешь транскрибацию ролика — и отправляешь Claude вот это:</p>
-<div class="prompt-box"><div class="prompt-box__title">Фраза-конвертер (сохрани себе)</div><div class="prompt-box__text">/reels-expert — режим 1, адаптация залётного ролика. Вот транскрибация из парсера:
+[вставь текст из колонки «Транскрибация»]
 
-[вставь сюда текст из колонки «Транскрибация»]
-
-Уникализируй под меня: мой метод, мой голос, мои границы. CTA — бесплатные 5 минут практики в шапке. Выдай готовый текст под суфлёр на 40–60 секунд.</div></div>
-<p class="text">Claude сохранит приём и структуру оригинала, а содержание перепишет полностью твоё: без упражнений, без запрещённых формулировок, с твоей механикой «сначала разрядить — потом расслабить». Можно вставлять хоть все 7 транскрибаций подряд — по одной фразе на каждую.</p>
+Уникализируй под меня: мой метод (тело, выход из «бей или беги», всё лёжа), мой тёплый голос из плюса, мои границы. CTA — бесплатный подробный урок в шапке. Выдай готовый текст под суфлёр на 40–60 секунд.</div></div>
+<p class="text">Claude возьмёт у оригинала приём и структуру, а содержание перепишет полностью под тебя. Чужие факты, кейсы и истории никогда не копируются.</p>
 
 <!-- ============================================================ -->
 <h2 class="section-heading"><span>04.</span>10 готовых сценариев <em>в воронку</em> — под суфлёр</h2>
-<p class="section-lead">Первая партия — уже написана: самые сильные темы из твоего банка, каждая по структуре «хук → мысль → механика → снятие вины → призыв», каждая ведёт на бесплатные 5 минут в шапке. Нажми на название, чтобы развернуть текст. Снимаются батчем за один присест.</p>
+<p class="section-lead">Первая партия написана: смыслы — со страницы интенсива (режим «бей или беги», «состояние кошки», «это не твоя вина»), каждая ведёт на бесплатный урок. Нажми на название, чтобы развернуть текст.</p>
 
-<details class="reel"><summary><span class="n">1</span><span class="t">«Почему твои визуализации не работают» · закреп</span><span class="hint">развернуть</span></summary><div class="body">
-<p>Ты визуализируешь, загадываешь, ведёшь дневник желаний — а жизнь не меняется. И ты решила, что делаешь что-то не так.</p>
-<p>Смотри, в чём правда. Пока тело зажато, визуализация — это просто фантазии. Ты представляешь новую жизнь, а тело в это время сидит со сжатой челюстью и поднятыми плечами. И для мозга сигнал тела всегда главнее красивой картинки в голове.</p>
-<p>Тело говорит «мы в опасности» — и мозг выбирает не новое, а знакомое. Каждый раз. Поэтому порядок такой: сначала телу — безопасность, потом желаниям — место. Это не эзотерика, это просто очередность.</p>
-<p>С тобой всё в порядке. Ты не «плохо визуализировала» — ты начинала с середины.</p>
-<p class="cta-p">С чего начать правильно — я показываю в бесплатном уроке, он в шапке профиля. Там же — первые 5 минут практики. Лёжа. Сегодня вечером.</p>
+<details class="reel"><summary><span class="n">1</span><span class="t">«Ты срываешься на ребёнка не потому, что ты плохая мать»</span><span class="hint">развернуть</span></summary><div class="body">
+<p>Ты срываешься на ребёнка не потому, что ты плохая мать. Досмотри — это важно.</p>
+<p>Срыв — это не про характер и не про любовь. Это физиология. Твоё тело годами живёт в режиме «бей или беги»: сжатая челюсть, каменная шея, поверхностное дыхание. В этом режиме у нервной системы просто нет паузы между «раздражитель» и «взрыв».</p>
+<p>Ты можешь тысячу раз пообещать себе «больше не буду». Но обещание живёт в голове, а реакция — в теле.</p>
+<p>Поэтому работает не сила воли, а переключение: научить тело выходить из «бей или беги» в расслабление. Пятнадцать минут в день, лёжа.</p>
+<p>Это не твоя вина. Тебе просто никто не показал, как.</p>
+<p class="cta-p">Как — я разбираю в бесплатном уроке, он в шапке профиля. Посмотри сегодня, пока все уснули.</p>
 </div></details>
 
-<details class="reel"><summary><span class="n">2</span><span class="t">«Шея болит не от подушки»</span><span class="hint">развернуть</span></summary><div class="body">
-<p>Шея болит не от подушки. И плечи каменные не от компьютера.</p>
-<p>Посчитай, сколько раз за сегодня ты промолчала, стерпела и «не стала раздувать». Вот столько раз тело сжалось. А разжаться ты ему не дала — некогда.</p>
-<p>Эмоция, которую не выпустили, не исчезает. Она оседает: челюсть, шея, плечи, живот. Массаж это разминает — на день. Потому что назавтра ты опять терпишь.</p>
-<p>Работает другое: научить тело отпускать самому. Это навык, и он ставится лёжа, за 15 минут в день. Ничего не надо делать. Надо перестать делать.</p>
-<p class="cta-p">В шапке профиля — бесплатные 5 минут практики. Послушай сегодня перед сном и завтра скажешь мне, что было с плечами.</p>
+<details class="reel"><summary><span class="n">2</span><span class="t">«5 сигналов, что тело живёт в режиме "бей или беги"»</span><span class="hint">развернуть</span></summary><div class="body">
+<p>Проверь себя прямо сейчас — пять сигналов, что твоё тело застряло в режиме «бей или беги».</p>
+<p>Один: сжатая челюсть. Заметь, что у тебя с ней в эту секунду. Два: холодные руки — кровь уходит к «мышцам для побега». Три: каменная шея и плечи, хотя ты «ничего такого не делала». Четыре: вечером не уснуть, утром — как будто и не спала. Пять: срываешься на близких по мелочам, а потом винишь себя.</p>
+<p>Если совпало хотя бы три — твоё тело годами живёт в стрессе и незаметно съедает твои силы, сон и желания. С тобой всё в порядке, это просто режим. И он переключается — лёжа, за 15 минут в день.</p>
+<p class="cta-p">Как именно — в бесплатном уроке в шапке профиля.</p>
 </div></details>
 
-<details class="reel"><summary><span class="n">3</span><span class="t">«Медитация — это не про расслабление»</span><span class="hint">развернуть</span></summary><div class="body">
-<p>Ты пробовала медитации, и они «не зашли». Знаешь почему? Потому что медитация — вообще не про расслабление.</p>
-<p>Медитация — про концентрацию внимания. Это тренировка, а не отдых. А теперь представь: ты сажаешь тело, полное непрожитой злости и невысказанных «нет», — и требуешь от него концентрации. Конечно, тебя хватило на три дня.</p>
-<p>Расслабление устроено наоборот: не собрать внимание, а отпустить напряжение. Не сидя с прямой спиной, а лёжа. Не усилием, а разрешением.</p>
-<p>Ты не «неусидчивая» и не «не создана для практик». Тебе просто дали не тот инструмент.</p>
-<p class="cta-p">Тот — в шапке профиля: первые 5 минут бесплатно. Ляг и нажми плей.</p>
+<details class="reel"><summary><span class="n">3</span><span class="t">«Разожми челюсть. Прямо сейчас»</span><span class="hint">развернуть</span></summary><div class="body">
+<p>Разожми челюсть. Прямо сейчас, пока смотришь это видео.</p>
+<p>Разжала? А ты вообще замечала, что она была сжата?</p>
+<p>Вот так же ты не замечаешь поднятые плечи, задержанное дыхание и живот, который втянут с утра до вечера. Тело держит напряжение фоном — а платишь за этот фон ты: энергией, сном, нервами.</p>
+<p>Самое интересное: ты не можешь «решить» расслабиться, как не можешь решить уснуть. Но можешь научить тело отпускать — это навык, и ставится он лёжа, с наушниками.</p>
+<p class="cta-p">Начни с бесплатного урока в шапке — там я показываю, почему тело так делает и как это выключается. А челюсть, кстати, ты уже опять сжала. Проверь 😉</p>
 </div></details>
 
-<details class="reel"><summary><span class="n">4</span><span class="t">«Прошла всех врачей — всё в норме»</span><span class="hint">развернуть</span></summary><div class="body">
-<p>«Я прошла всех врачей. Анализы идеальные. А мне плохо». Если это про тебя — досмотри до конца.</p>
-<p>Когда по обследованиям всё в порядке, а жить тяжело, вопрос не «что со мной не так». Вопрос — «что моё тело держит». Годы в режиме «терпи и будь удобной» не отражаются в анализах. Они отражаются в зажатой шее, в вечере, когда не уснуть, в «ничего не хочу».</p>
-<p>Ты чувствовала верно. Объяснение тебе дали неправильное.</p>
-<p>И нет, чинить тебя не надо. Тебя не сломали — тебя зажали. А зажатое можно отпустить.</p>
-<p class="cta-p">В шапке профиля — бесплатный урок, где я объясняю, как это устроено, и 5 минут практики, чтобы проверить на себе. Сегодня. Лёжа.</p>
+<details class="reel"><summary><span class="n">4</span><span class="t">«Почему массаж отпускает только до завтра»</span><span class="hint">развернуть</span></summary><div class="body">
+<p>Массаж — на день. Магний — «ну вроде что-то есть». Психолог — всё поняла, ничего не изменилось. Знакомая коллекция?</p>
+<p>Смотри, в чём фокус. Шея, сон и срывы — это не пять разных проблем. Это одна причина в пяти местах: тело в режиме «бей или беги».</p>
+<p>Массажист разминает шею — но режим-то включён, и к вечеру следующего дня она снова каменная. Магний не переключает нервную систему. А разговоры работают с головой, когда реакции живут в теле.</p>
+<p>Ты не «перепробовала всё». Ты перепробовала всё — кроме самого тела.</p>
+<p class="cta-p">Третий путь: не работать головой и не нагружать тело, а дать ему отпустить. В бесплатном уроке в шапке объясняю, как это устроено. Твоя шея скажет спасибо.</p>
 </div></details>
 
-<details class="reel"><summary><span class="n">5</span><span class="t">«Ты не расслабляешься даже в отпуске»</span><span class="hint">развернуть</span></summary><div class="body">
-<p>Ты копила на отпуск, долетела до моря — и на третий день поняла, что устала так же.</p>
-<p>Это не отпуск плохой. Это тело не получило команду «можно». Смотри, как работает: напряжение — это не место, это режим. Ты увезла с собой ту же сжатую челюсть и тот же список тревог, просто разложила их на шезлонге.</p>
-<p>Телу всё равно, где ты. Ему не всё равно, безопасно ли отпускать. Пока этот режим включён, не сработает ни отпуск, ни спа, ни «просто отдохни».</p>
-<p>Хорошая новость: режим переключается. Не билетами, а практикой — 15 минут, лёжа, дома.</p>
-<p class="cta-p">Первые 5 минут — бесплатно, в шапке профиля. Дешевле отпуска. Работает дольше.</p>
+<details class="reel"><summary><span class="n">5</span><span class="t">«Ты просыпаешься уже уставшей»</span><span class="hint">развернуть</span></summary><div class="body">
+<p>Ты просыпаешься уже уставшей. Кофе давно не помогает, а до вечера ещё дожить. И ты думаешь, что тебе не хватает витаминов, мотивации или отпуска.</p>
+<p>А теперь правда: во сне твоё тело не отдыхало. Оно всю ночь охраняло тебя — со сжатой челюстью и напряжёнными плечами, в том же режиме «бей или беги», в котором провело день. Формально ты спала. Фактически — стояла на посту.</p>
+<p>Поэтому «спи побольше» не работает: дело не в количестве сна, а в том, в каком теле ты в него входишь.</p>
+<p>Пятнадцать минут практики перед сном — лёжа, с наушниками — и тело входит в ночь выключенным, а не на взводе.</p>
+<p class="cta-p">С чего начать — в бесплатном уроке, он в шапке профиля. Сегодня и проверишь, как проснёшься.</p>
 </div></details>
 
-<details class="reel"><summary><span class="n">6</span><span class="t">«"Просто отпусти" — самый бесполезный совет»</span><span class="hint">развернуть</span></summary><div class="body">
-<p>«Просто отпусти ситуацию». Спасибо, дорогая, а как?!</p>
-<p>Говорю как человек, который «отпускал» годами: отпустить — это не мысль. Это телесный процесс. Нельзя головой отпустить то, что держит тело. Ты можешь сто раз решить «всё, забыли» — а челюсть всё ещё сжата, и в два ночи мозг опять крутит тот разговор.</p>
-<p>Потому что для мозга «отпущено» — это когда тело разжалось. Не раньше.</p>
-<p>Значит, и заходить надо через тело: выгрузить накопленное, дать телу команду «можно» — и вот тогда «отпустилось» случается само. Без силы воли.</p>
-<p class="cta-p">Я собрала это в практики, которые слушают лёжа. Первые 5 минут — бесплатно, ссылка в шапке. Проверь на самой залипшей своей мысли.</p>
+<details class="reel"><summary><span class="n">6</span><span class="t">«Почему одни видят возможности, а другие — только проблемы»</span><span class="hint">развернуть</span></summary><div class="body">
+<p>Почему одни женщины видят возможности, а другие — только проблемы? Это не про везение и не про мышление. Это про тело.</p>
+<p>У внимания есть фильтр. В стрессе он сужается: мозг ищет угрозы, и ты видишь счета, конфликты и «опять всё на мне». В расслабленном теле фильтр раскрывается — и в то же самое поле зрения попадают варианты, люди, идеи.</p>
+<p>Возможности были рядом всегда. Просто в режиме «бей или беги» они не проходят фильтр.</p>
+<p>Поэтому «начни мыслить позитивно» не работает: фильтром управляет не мысль, а нервная система. Переключи тело — и мир буквально станет выглядеть иначе.</p>
+<p class="cta-p">Как переключать — в бесплатном уроке в шапке профиля. Это проще, чем ты думаешь: лёжа.</p>
 </div></details>
 
-<details class="reel"><summary><span class="n">7</span><span class="t">«Зачем я вообще проснулась» · личный</span><span class="hint">развернуть</span></summary><div class="body">
-<p>Каждое утро я просыпалась с одной мыслью: зачем я вообще проснулась.</p>
-<p>Снаружи — обычная жизнь: работа, дела, всё «нормально». Внутри — ни желаний, ни радости. Просто день сурка, который надо дотерпеть до вечера.</p>
-<p>Я думала, я сломанная. Оказалось — зажатая. Это разные вещи.</p>
-<p>Когда я дала телу выгрузить то, что оно держало годами, и научила его отпускать — желания вернулись. Не от мотивации. Из-под завала.</p>
-<p>Сегодня моя первая мысль утром — «быстрее бы проснуться». И это не магия, это механика, которую я могу показать.</p>
-<p class="cta-p">Начало — бесплатно: урок и 5 минут практики в шапке профиля. Если ты сейчас там, где была я, — начни с этого.</p>
+<details class="reel"><summary><span class="n">7</span><span class="t">«30 тысяч, маршрутка и "так теперь будет всегда"» · личный</span><span class="hint">развернуть</span></summary><div class="body">
+<p>Тридцать тысяч в месяц, пять через два, зимняя остановка и мысль: «так теперь будет всегда».</p>
+<p>Это я. И тогда я была в этом уверена — потому что жила с невысказанной установкой «я недостойна ничего хорошего».</p>
+<p>Первое, что изменилось, когда я начала телесные практики, — я ясно поняла, чего хочу. Не «поверила в себя», а именно услышала себя. Дальше — ушла из найма, открыла своё дело. Сейчас у меня две студии, оборот в двадцать раз больше той зарплаты, любимый муж и те самые букеты, которых я когда-то считала себя недостойной.</p>
+<p>Я не особенная. Я просто перестала искать ответ в голове и нашла его в теле.</p>
+<p class="cta-p">Если ты сейчас на своей «зимней остановке» — начни с бесплатного урока в шапке. Я собрала туда то, чего мне тогда никто не дал целиком.</p>
 </div></details>
 
-<details class="reel"><summary><span class="n">8</span><span class="t">«Аффирмации перед зеркалом не работают»</span><span class="hint">развернуть</span></summary><div class="body">
-<p>«Я уверенная, я спокойная, я разрешаю себе…» — говоришь ты зеркалу. А внутри всё сжимается от фальши. Знакомо?</p>
-<p>Вот почему так: слова, в которые тело не верит, мозг помечает как ложь. И чем чаще ты их повторяешь, тем громче внутренний «да ладно».</p>
-<p>Это не значит, что с тобой что-то не так. Это значит, что порядок перепутан. Сначала — телу безопасность. Потом — словам вера. На расслабленном теле та же фраза вдруг перестаёт быть враньём.</p>
-<p>Поэтому я не даю аффирмации. Я даю практики, после которых они не нужны.</p>
-<p class="cta-p">Первые 5 минут — бесплатно, в шапке профиля. Лёжа, вечером, сегодня.</p>
+<details class="reel"><summary><span class="n">8</span><span class="t">«Состояние кошки»</span><span class="hint">развернуть</span></summary><div class="body">
+<p>Хочешь узнать, у кого идеальная нервная система? У твоей кошки.</p>
+<p>Смотри: она спит, когда хочет. Потягивается каждый раз, когда встаёт. Не извиняется за отдых. Не доедает «чтобы не пропало». Мгновенно злится и через минуту уже мурлычет — ничего не копит.</p>
+<p>И заметь: её все хотят гладить.</p>
+<p>Это и есть то, что я называю состоянием кошки: тело, которое отпускает сразу, а не складирует напряжение годами. И это не характер — это навык, который у тебя когда-то был. Вспомни себя в пять лет.</p>
+<p>Хорошая новость: навык восстанавливается. Лёжа, по пятнадцать минут в день.</p>
+<p class="cta-p">С чего начать — в бесплатном уроке, ссылка в шапке. Твоя внутренняя кошка уже потянулась.</p>
 </div></details>
 
-<details class="reel"><summary><span class="n">9</span><span class="t">«Письмо перед сном работает лучше подсчёта овец»</span><span class="hint">развернуть</span></summary><div class="body">
-<p>Лежишь, завтра рабочий день, а мозг устроил планёрку: не забыть, позвонить, доделать. Знакомо? Держи способ, который реально мерили в лаборатории сна.</p>
-<p>Перед сном — выписать список дел на завтра. На бумагу. Пять минут. Люди с выписанным списком засыпали заметно быстрее. Потому что мозгу больше не надо держать это всё в оперативке ночью.</p>
-<p>Это самая простая часть моей вечерней практики. А полная версия делает то же самое не только со списком дел, но и с напряжением в теле.</p>
-<p>Ничего не надо делать. Надо перестать делать.</p>
-<p class="cta-p">Вечерняя практика — в моём наборе, а первые 5 минут можно забрать бесплатно в шапке профиля. Сегодня и проверишь.</p>
+<details class="reel"><summary><span class="n">9</span><span class="t">«Ты всё понимаешь головой. А жизнь не меняется»</span><span class="hint">развернуть</span></summary><div class="body">
+<p>Ты прочитала все книги. Прошла марафоны. Можешь сама лекцию прочитать про границы и самоценность. А жизнь — не меняется.</p>
+<p>И вот почему. Всё, что ты пробовала, работало с головой. А твои реакции живут не в голове — в теле: в плечах, в дыхании, в зажатой челюсти. Голова давно всё поняла. Тело продолжает по-старому.</p>
+<p>Поэтому в момент срыва тебе не помогает ни одна умная мысль — тело быстрее.</p>
+<p>Рабочий порядок другой: сначала тело выходит из режима «бей или беги», реакции меняются сами — а вслед за ними то, как ты себя чувствуешь и как мир отвечает тебе.</p>
+<p>Не нужно себя ломать. Нужно 15 минут в день и наушники.</p>
+<p class="cta-p">Начало — бесплатный урок в шапке профиля. Голове понравится: там всё по физиологии.</p>
 </div></details>
 
-<details class="reel"><summary><span class="n">10</span><span class="t">«Первый шаг стоил ноль рублей» · личный</span><span class="hint">развернуть</span></summary><div class="body">
-<p>Мой первый шаг из самой тёмной точки жизни стоил ноль рублей.</p>
-<p>Весна, вечер, внутри чёрная дыра и мысль «я не достойна любви». И одно наблюдение, которое всё изменило: ситуации разные — а чувствую я всегда одно и то же. Значит, дело не в ситуациях.</p>
-<p>Через три дня я впервые легла и попробовала практику. Бесплатную. Дальше были годы пути, учёба, почти миллион в обучение — но дверь открыл тот первый бесплатный вечер.</p>
-<p>Поэтому я устроила свою систему так же: вход бесплатный. Урок, который объясняет, почему у тебя не получается расслабиться, и первые 5 минут практики.</p>
-<p class="cta-p">Ссылка в шапке. Твой первый шаг тоже может стоить ноль рублей. Сегодня.</p>
+<details class="reel"><summary><span class="n">10</span><span class="t">«"Мне уже поздно". Мне было тридцать» · личный</span><span class="hint">развернуть</span></summary><div class="body">
+<p>«Мне уже поздно что-то менять». Знаешь, сколько мне было, когда я была в этом уверена? Тридцать.</p>
+<p>Я стояла на зимней остановке с зарплатой в тридцать тысяч и точным знанием, что это навсегда. Никакой веры в себя у меня не было — было уставшее тело, которое годами жило в режиме «бей или беги», и голова, которая называла это «характер такой».</p>
+<p>Всё, что произошло дальше — своё дело, две студии, жизнь, в которую хочется просыпаться, — началось не с мотивации. А с пятнадцати минут лёжа.</p>
+<p>Поздно не бывает. Бывает тело, которому давно никто не разрешал отпустить.</p>
+<p class="cta-p">Разреши. Первый шаг — бесплатный урок в шапке профиля. Сегодня вечером, лёжа.</p>
 </div></details>
 
-<div class="highlight"><strong>Порядок публикации:</strong> 1 → 2 → 3 → 4 → 8 → 5 → 9 → 7 → 6 → 10. Личные (№7 и №10) не ставим подряд — между ними объясняющие. Подпись под каждым роликом одинаковая, с бесплатными 5 минутами в шапке.</div>
+<div class="highlight"><strong>Порядок публикации:</strong> 2 → 3 → 1 → 4 → 5 → 8 → 6 → 7 → 9 → 10 (личные №7 и №10 разнесены). Подпись под каждым: «Бесплатный подробный урок — в шапке 🤍».</div>
 
 <!-- ============================================================ -->
 <h2 class="section-heading"><span>05.</span>3 карусели: <em>сценарий + дизайн + фото</em></h2>
-<p class="section-lead">Каждая — готовый посценарный план: текст всех слайдов, дизайн в твоём стиле (как эта страница) и пометки, где какие фото и скрины вставить. Разворачивай, смотри, собирай фразой для Claude.</p>
+<p class="section-lead">Тексты всех слайдов, дизайн в стиле страницы интенсива (молочный фон, бордовый акцент, засечки) и пометки, где какие фото. Полные раскадровки — в файле, здесь суть:</p>
 
-<details class="reel"><summary><span class="n">К1</span><span class="t">«7 признаков, что тело живёт в режиме "терпи"» · 9 слайдов</span><span class="hint">развернуть</span></summary><div class="body">
-<p><strong>Задача:</strong> охват и подписка через узнавание.</p>
-<p><strong>Слайд 1 (обложка):</strong> «7 признаков, что твоё тело живёт в режиме „терпи"» + подпись «и при чём тут „ничего не хочу"». Крупный заголовок с засечками, бежевый фон. <em>Фото: твой портрет по пояс, спокойный взгляд, справа снизу.</em></p>
-<p><strong>Слайды 2–5 (признаки, по 1–2 на слайд):</strong> 1. Вечером не уснуть — прокручиваешь день · 2. Плечи и челюсть сжаты «сами по себе» · 3. Отпуск был — отдыха не было · 4. Срываешься на своих — потом винишь себя · 5. «Расслабься» звучит как издевательство · 6. Всё «нормально» — а радости нет · 7. Не знаешь, чего хочешь. Вообще. Крупные курсивные цифры в акцентном цвете. <em>На слайде 3 — фото-полоска: смятая подушка или чашка чая.</em></p>
-<p><strong>Слайд 6:</strong> «Если узнала себя хотя бы в трёх — с тобой всё в порядке. Это не характер и не лень. Это тело, которое годами держит то, что ты промолчала». Розово-бежевый блок на весь слайд.</p>
-<p><strong>Слайд 7 (схема):</strong> цепочка из трёх плашек: зажатое тело → тревога, мозг видит знакомое → тянет в привычное болотце. Подпись: «поэтому „новая жизнь с понедельника" заканчивается во вторник».</p>
-<p><strong>Слайд 8 (цитата):</strong> «Тебя не сломали — тебя зажали. Чинить нечего. Отпускать — можно». Засечки, курсив, линия акцента слева. <em>Фото: ты, тёплый свет.</em></p>
-<p><strong>Слайд 9 (финал):</strong> «Первый шаг — бесплатно: урок + 5 минут практики. Лёжа. Сегодня вечером» + плашка-кнопка «ссылка в шапке» + ник.</p>
-<p class="cta-p">Фраза: /carousel — собери карусель по сценарию «Карусель 1» из ~/alena-setup/content/carousels-3.md, 9 слайдов, моя палитра.</p>
-</div></details>
-
-<details class="reel"><summary><span class="n">К2</span><span class="t">«Почему визуализации не работают» · 8 слайдов</span><span class="hint">развернуть</span></summary><div class="body">
-<p><strong>Задача:</strong> ядро бренда → воронка.</p>
-<p><strong>Слайд 1:</strong> заголовок + подпись «и что сделать, чтобы заработали». <em>Скрин: эстетичная раскладка дневника желаний (твой блокнот).</em></p>
-<p><strong>Слайд 2:</strong> «Ты представляешь новую жизнь. А тело в это время сидит со сжатой челюстью и поднятыми плечами». <em>Фото: напряжённые плечи/руки крупным планом.</em></p>
-<p><strong>Слайд 3:</strong> «Для мозга сигнал тела всегда главнее картинки в голове. Тело говорит „мы в опасности" — мозг выбирает знакомое. Каждый раз». Блок-плашка.</p>
-<p><strong>Слайд 4:</strong> список с крестиками: аффирмации у зеркала · дневники желаний · «думай позитивно» · марафоны желаний.</p>
-<p><strong>Слайд 5:</strong> «Дело не в тебе. Ты просто начинала с середины» — крупно, много воздуха.</p>
-<p><strong>Слайд 6 (схема):</strong> правильный порядок: 1. Выгрузить накопленное → 2. Научить тело отпускать → 3. И только потом — желания.</p>
-<p><strong>Слайд 7:</strong> «Когда телу безопасно — поле внимания расширяется, и ты видишь возможности, которые были рядом всегда». <em>Фото: ты лёжа с наушниками (постановочный кадр практики).</em></p>
-<p><strong>Слайд 8 (финал):</strong> «Проверь на себе: бесплатный урок + первые 5 минут практики» + плашка «ссылка в шапке» + ник.</p>
-<p class="cta-p">Фраза: /carousel — собери карусель по сценарию «Карусель 2» из ~/alena-setup/content/carousels-3.md, 8 слайдов, моя палитра.</p>
-</div></details>
-
-<details class="reel"><summary><span class="n">К3</span><span class="t">«Ты уже всё пробовала. Вот почему не сработало» · 9 слайдов</span><span class="hint">развернуть</span></summary><div class="body">
-<p><strong>Задача:</strong> снять возражение «я уже пробовала» → воронка.</p>
-<p><strong>Слайд 1:</strong> заголовок. <em>Фото: твой взгляд в камеру, полуулыбка.</em></p>
-<p><strong>Слайды 2–5 (формат «что пробовала → почему мимо»):</strong> Зал и кардио → это напряжение, а не расслабление · Приложения с медитациями → концентрация на зажатом теле, эффект на день <em>(скрин заставки приложения, размытый)</em> · Отпуск → та же ты в других декорациях <em>(фото: чемодан/море, приглушённое)</em> · Книги по психологии → понимаешь всё, меняется ничего.</p>
-<p><strong>Слайд 6 (самый расшариваемый):</strong> «„Взять себя в руки"? Ты и так двадцать лет в руках. В этом и проблема». Плашка на весь слайд.</p>
-<p><strong>Слайд 7:</strong> «Общий знаменатель: везде тело либо не участвовало, либо напрягалось».</p>
-<p><strong>Слайд 8:</strong> «Работает обратное: лёжа, 15 минут, без усилий. Сначала выгрузить, потом отпустить». <em>Фото: наушники на кровати, вечерний свет.</em></p>
-<p><strong>Слайд 9 (финал):</strong> «Первые 5 минут — бесплатно. Сегодня вечером и проверишь» + плашка «ссылка в шапке» + ник.</p>
-<p class="cta-p">Фраза: /carousel — собери карусель по сценарию «Карусель 3» из ~/alena-setup/content/carousels-3.md, 9 слайдов, моя палитра.</p>
-</div></details>
+<div class="table-wrap"><table>
+  <tr><th>Карусель</th><th>Слайдов</th><th>Задача</th><th>Расшариваемый слайд</th></tr>
+  <tr><td><strong>К1 · «5 сигналов „бей или беги"»</strong></td><td>8</td><td>Тест-узнавание → охват</td><td>«Это не пять разных проблем. Это одна причина в пяти местах»</td></tr>
+  <tr><td><strong>К2 · «Ты срываешься не потому, что плохая мать»</strong></td><td>8</td><td>Вирусный смысл → урок</td><td>«Это не твоя вина. Тебе просто никто не показал, как»</td></tr>
+  <tr><td><strong>К3 · «Почему массаж, магний и марафоны не сработали»</strong></td><td>8</td><td>Возражение «я пробовала» → урок</td><td>«Ты перепробовала всё — кроме самого тела»</td></tr>
+</table></div>
+<div class="prompt-box"><div class="prompt-box__title">Фраза для сборки</div><div class="prompt-box__text">/carousel — собери карусель по сценарию «Карусель 1» из ~/alena-setup/content/carousels-3.md, 8 слайдов, стиль страницы интенсива (молочный + бордо). Места под фото оставь плейсхолдерами с подписью, что вставить.</div></div>
 
 <!-- ============================================================ -->
 <h2 class="section-heading"><span>06.</span>Домашнее задание <em>этой недели</em></h2>
 <ul class="check">
-  <li><strong>Собери список блогеров для парсера.</strong> 20–40 аккаунтов твоей ниши: тело и психосоматика простым языком · медитации и практики лёжа · выгорание и «железная леди» · возвращение к себе. Бери растущих и средних (20–100 тыс.), не только миллионников — у растущих виднее, что залетает прямо сейчас. Занеси ники в табличку парсера (кнопка «Добавить» или скажи Claude: «/parser — добавь в bloggers.txt список: …»).</li>
-  <li><strong>Покопайся в интерфейсе парсера.</strong> Запусти «Анализ Reels» по своему списку, открой таблицу, выбери 3–5 роликов и нажми «Взять в работу» — посмотри, как появляются транскрибации.</li>
-  <li><strong>Прогони первую транскрибацию через фразу-конвертер</strong> из блока 03 — получи свой первый уникализированный сценарий из чужого залётного ролика.</li>
-  <li><strong>Сними первую партию:</strong> 10 готовых сценариев выше — батчем, через суфлёр, 1,5–2 часа. Публикуй по одному в день в порядке из блока 04.</li>
-  <li><strong>Собери карусель К1</strong> фразой для Claude и подготовь к ней 3 фото по пометкам.</li>
+  <li><strong>Собери список блогеров для парсера.</strong> 20–40 аккаунтов ниши: тело и нервная система простым языком · практики и медитации лёжа · женское выгорание и срывы · «возвращение к себе». Бери растущих и средних (20–100 тыс.) — у них виднее, что залетает прямо сейчас. Занеси в табличку парсера (кнопка «Добавить» или «/parser — добавь в список: …»).</li>
+  <li><strong>Покопайся в интерфейсе парсера:</strong> запусти «Анализ Reels», открой таблицу, отметь 3–5 роликов «Взять в работу», посмотри, как появляются транскрибации.</li>
+  <li><strong>Прогони первую транскрибацию через фразу-конвертер</strong> — получи первый уникализированный сценарий из чужого залётного ролика.</li>
+  <li><strong>Сними первую партию:</strong> 10 сценариев выше, батчем через суфлёр, 1,5–2 часа. Публикуй по порядку из блока 04.</li>
+  <li><strong>Собери карусель К1</strong> фразой для Claude и подготовь 3 фото по пометкам из файла.</li>
 </ul>
 
 <div class="btn-row">
   <a class="btn btn--primary" href="downloads/files/content/viral-reels-10.md" download>10 сценариев (файл)</a>
   <a class="btn" href="downloads/files/content/carousels-3.md" download>3 карусели (файл)</a>
-  <a class="btn" href="downloads/files/content/reels-ideas.md" download>Банк 35 идей</a>
-  <a class="btn" href="downloads/files/parser/PARSER-GUIDE.md" download>Гайд по парсеру</a>
+  <a class="btn" href="downloads/files/content/reels-ideas.md" download>Банк идей</a>
+  <a class="btn" href="index.html">← Весь маршрут</a>
 </div>
 
 </div>
