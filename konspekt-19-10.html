@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Конспект созвона 19.10 — Алёна × Майя</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700;800&family=DM+Sans:ital@1&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root { --accent: #710C04; --bg: #FDFCF9; --text: #262220; --muted: #55504B; --block: #F7F3EC; --hair: #E9E4DC; --line: #EFEAE2; --soft: #948C83; }
+body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); font-size: 17px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+.nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 48px; border-bottom: 1px solid var(--line); position: sticky; top: 0; background: var(--bg); z-index: 100; }
+.nav__mono { font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; font-size: 22px; color: var(--accent); text-decoration: none; }
+.nav__logo-name { font-family: 'DM Sans', sans-serif; font-size: 14px; font-style: italic; color: var(--soft); letter-spacing: .5px; }
+.container { max-width: 740px; margin: 0 auto; padding: 0 24px; }
+.hero { padding: 56px 0 34px; }
+.badge { display: inline-block; font-size: 11px; font-weight: 600; color: var(--accent); border: 1px solid var(--accent); padding: 5px 16px; margin-bottom: 20px; letter-spacing: 2px; text-transform: uppercase; }
+.hero h1 { font-family: 'Libre Baskerville', Georgia, serif; font-size: 36px; font-weight: 700; line-height: 1.25; margin-bottom: 14px; }
+.hero h1 em { font-style: italic; color: var(--accent); }
+.hero__desc { font-size: 17.5px; color: var(--muted); line-height: 1.7; }
+.hero__meta { font-size: 14px; color: var(--soft); margin-top: 14px; letter-spacing: 1px; }
+.section-heading { font-family: 'Libre Baskerville', Georgia, serif; font-size: 27px; font-weight: 700; line-height: 1.3; padding: 48px 0 16px; border-top: 1px solid var(--hair); }
+.section-heading span { color: var(--accent); margin-right: 8px; }
+.section-heading em { font-style: italic; color: var(--accent); }
+.highlight { background: var(--block); padding: 20px 24px; margin: 22px 0; font-size: 16px; line-height: 1.75; color: var(--muted); }
+.highlight strong { color: var(--text); }
+.text { font-size: 16.5px; color: var(--muted); margin-bottom: 14px; }
+.text strong { color: var(--text); }
+.guide-list { list-style: none; margin: 10px 0 22px; }
+.guide-list li { font-size: 16px; line-height: 1.7; color: var(--muted); padding: 8px 0 8px 20px; position: relative; border-bottom: 1px solid var(--line); }
+.guide-list li:last-child { border-bottom: none; }
+.guide-list li::before { content: ''; position: absolute; left: 0; top: 15px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.guide-list li strong { color: var(--text); }
+.step { display: flex; gap: 18px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.step__num { font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; font-size: 24px; color: var(--accent); opacity: .45; min-width: 34px; line-height: 1.2; }
+.step__body { flex: 1; font-size: 15.5px; color: var(--muted); line-height: 1.7; }
+.step__body b { color: var(--text); }
+.quote { font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; font-size: 17.5px; color: var(--text); border-left: 3px solid var(--accent); padding: 4px 0 4px 18px; margin: 18px 0; line-height: 1.65; }
+table { width: 100%; border-collapse: collapse; margin: 14px 0 24px; font-size: 15px; }
+th, td { text-align: left; vertical-align: top; padding: 11px 12px; border-bottom: 1px solid var(--line); line-height: 1.55; }
+th { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--soft); font-weight: 600; }
+td strong { color: var(--text); }
+.table-wrap { overflow-x: auto; }
+.btn-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 8px; }
+.btn { display: inline-block; text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 12px 20px; border: 1px solid var(--accent); color: var(--accent); background: transparent; transition: .15s; }
+.btn:hover { background: var(--accent); color: #fff; }
+.btn--primary { background: var(--accent); color: #fff; }
+.btn--primary:hover { background: #4d0803; }
+.footer { text-align: center; padding: 56px 24px; border-top: 1px solid var(--hair); margin-top: 56px; color: var(--soft); font-size: 14px; }
+@media print { .nav, .btn-row, .footer { display: none; } body { background: #fff; } }
+@media screen and (max-width: 768px) { .nav { padding: 16px 20px; } .hero h1 { font-size: 27px; } .section-heading { font-size: 22px; } }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav__mono" href="index.html">А</a>
+  <span class="nav__logo-name">Алёна · телесные практики и психология</span>
+</nav>
+
+<div class="container">
+
+<section class="hero">
+  <div class="badge">Конспект созвона · 19 октября</div>
+  <h1>Сначала простая воронка: <em>урок, сайт и оплата</em></h1>
+  <p class="hero__desc">О чём договорились: на этой неделе не распыляемся и собираем базовую воронку. Урок лежит в закрепе Telegram-канала, под ним ссылка на сайт, на сайте оплата и практики. Бот, упаковка профиля и reels идут следующими шагами.</p>
+  <p class="hero__meta">ВОРОНКА · САЙТ · ДОМЕН · TELEGRAM-КАНАЛ · ПАКЕТ СКИЛЛОВ · ЗАДАНИЯ</p>
+</section>
+
+<div class="btn-row">
+  <a class="btn btn--primary" href="downloads/pdf/konspekt-sozvon-19-10-voronka.pdf" download>Скачать PDF</a>
+  <a class="btn" href="index.html">← Дорожная карта</a>
+</div>
+
+<h2 class="section-heading"><span>01.</span>Главное за 60 секунд</h2>
+<ul class="guide-list">
+  <li><strong>Сначала урок и возможность купить практики.</strong> Пока урока нет, контент с призывом «смотрите мой урок» вести некуда. Поэтому всё остальное выставляем после.</li>
+  <li><strong>Воронка упрощённая.</strong> Урок кладём в закреп Telegram-канала, а не в бота. В бота перенесём позже, когда будут готовы позиционирование и оформление блога.</li>
+  <li><strong>Сайт нужен в любом случае,</strong> даже если урок в Telegram, а не в боте. Голая ссылка на оплату в Продамусе работает, но у всех сильных экспертов есть сайт.</li>
+  <li><strong>Порядок дальше:</strong> воронка → упаковка профиля → запись reels.</li>
+  <li><strong>Пакет скиллов, прогревы, reels и упаковку</strong> я адаптирую под твои обновлённые материалы к следующему созвону.</li>
+</ul>
+<div class="quote">Я делала точно такой же цикл весной, и он дал мне полную свободу на всё лето и осень: воронка работала без меня. Самые тяжёлые действия как раз сейчас.</div>
+
+<h2 class="section-heading"><span>02.</span>Как человек идёт по воронке</h2>
+<div class="step"><span class="step__num">1</span><div class="step__body"><b>Кодовое слово в Instagram.</b> Например, «урок» или «реклама». Человек пишет его и получает ссылку на Telegram-канал.</div></div>
+<div class="step"><span class="step__num">2</span><div class="step__body"><b>Telegram-канал.</b> Там уже лежат посты, чтобы человеку захотелось подписаться и остаться.</div></div>
+<div class="step"><span class="step__num">3</span><div class="step__body"><b>Урок в закрепе.</b> Ты даёшь немного пользы и предлагаешь решение: «вот такая у меня программа, вот столько стоит, переходите».</div></div>
+<div class="step"><span class="step__num">4</span><div class="step__body"><b>Под уроком ссылка на сайт.</b> На сайте ещё раз вся информация о продукте: что это, для кого, что входит, ответы на вопросы и кнопка оплаты.</div></div>
+<div class="step"><span class="step__num">5</span><div class="step__body"><b>Оплата → практики.</b> После оплаты человек получает доступ к практикам.</div></div>
+<div class="highlight"><strong>Почему урок, а не сайт сразу:</strong> на урок человек приходит, ещё ничего не зная о продукте. Он узнаёт о нём во время урока, ему хочется почитать подробнее, и тут ему нужен сайт.</div>
+
+<h2 class="section-heading"><span>03.</span>Сайт и домен</h2>
+<ul class="guide-list">
+  <li><strong>Сайт ты уже сделала</strong> в Claude по моему шаблону (оффер в начале) и поправила фото и формулировки. Осталось подключить оплату, чтобы всё работало.</li>
+  <li><strong>Как это устроено технически:</strong> страница лежит на GitHub, Claude её публикует. Для простого лендинга хватит GitHub и Claude.</li>
+  <li><strong>Домен купи обязательно,</strong> например на reg.ru за ~150 ₽, оплата российской картой (что-то вроде alena.ru). Тогда сайт будет под твоим именем, без упоминаний GitHub.</li>
+  <li><strong>Как подключить домен,</strong> спроси у Claude: он объяснит по шагам, там ничего сложного.</li>
+</ul>
+
+<h2 class="section-heading"><span>04.</span>Telegram-канал до урока</h2>
+<p class="text">Прежде чем класть урок в канал, напиши с Claude несколько постов по примеру упаковки Instagram. Так человек придёт в канал, ему будет интересно, и он останется. Важно, чтобы аудитория была не только в Instagram.</p>
+<ul class="guide-list">
+  <li><strong>О себе:</strong> твой путь, как было раньше, почему пришла в эту нишу.</li>
+  <li><strong>Полезная подборка</strong> для тех, кому подходит твой продукт.</li>
+  <li><strong>Фишки и лайфхаки.</strong></li>
+  <li><strong>Личный пост</strong> с личной историей.</li>
+  <li><strong>На будущее:</strong> еженедельная рубрика с разбором ситуации подписчицы или частой ситуации (идеи и примеры можно сгенерировать в Claude).</li>
+</ul>
+<h3 class="section-heading" style="border-top:none;padding-top:24px;font-size:21px">Как писать пользу, чтобы не было «Википедии»</h3>
+<p class="text">Научные термины и объяснения работы мозга сами по себе превращают канал в пустой портал. Сначала нужна <strong>триггерная точка</strong>: боль или ситуация, которая знакома всем. Уже из неё ты раскручиваешь объяснение.</p>
+<ul class="guide-list">
+  <li><strong>Твой день:</strong> клиентка опоздала на занятие и сказала то-то. Рассказываешь ситуацию и объясняешь, что за ней стоит.</li>
+  <li><strong>Фильм или книга:</strong> увидела частую женскую ситуацию и разбираешь её.</li>
+  <li><strong>Инфоповод:</strong> громкая новость, на которую ты смотришь через свою тему.</li>
+  <li><strong>Встреча или разговор:</strong> «сегодня на улице встретила…», а дальше твоё объяснение. Живо и интересно читать.</li>
+</ul>
+
+<h2 class="section-heading"><span>05.</span>Доступ и обратная связь</h2>
+<ul class="guide-list">
+  <li><strong>Доступ «навсегда» тормозит результат.</strong> Человек думает «потом сделаю» и часто вообще не проходит. Я в новой программе перехожу на ограниченный доступ (например, 1,5–2 или 6 месяцев в зависимости от тарифа). Подумай, подходит ли это твоему интенсиву.</li>
+  <li><strong>Возможность написать тебе важна психологически,</strong> даже если пишут редко. Ещё по вопросам видно, где люди спотыкаются и что добавить в программу.</li>
+  <li><strong>Формат на выбор:</strong> чат для купивших с тобой внутри или просто возможность написать тебе. Так как у тебя практики, скорее будут отзывы вроде «спасибо за практику», а не много вопросов.</li>
+  <li><strong>Патент.</strong> Формат обратной связи может влиять на налоговый режим. Уточни у бухгалтера, как это касается твоего патента (у тебя йога тоже на патенте).</li>
+</ul>
+
+<h2 class="section-heading"><span>06.</span>Скиллы, прогревы и упаковка</h2>
+<p class="text">Всё, что я даю (посты, сторителлинги, прогревы, reels), строится не по общему шаблону, а от твоего оффера, анализа ЦА и болей, на которые давит продукт. Поэтому в начале мы собирали оффер и твою историю: под них адаптируются все ассистенты.</p>
+<ul class="guide-list">
+  <li><strong>Структура прогрева</strong> нужна для запуска на текущую аудиторию или на базу, которая соберётся.</li>
+  <li><strong>Ты обновила ЦА и переписала урок,</strong> поэтому пакет, прогревы, reels и упаковку я адаптирую под новые материалы и дам всё в одном месте к следующему созвону.</li>
+  <li><strong>Установка:</strong> у тебя что-то не доустановилось. Разберём и поставим всё целиком на следующем созвоне.</li>
+</ul>
+
+<h2 class="section-heading"><span>07.</span>Задания</h2>
+<div class="step"><span class="step__num">1</span><div class="step__body"><b>Доделать сайт с оплатой на этой неделе.</b> Я зайду, протестирую: оплачу, получу практики, перейду дальше.</div></div>
+<div class="step"><span class="step__num">2</span><div class="step__body"><b>Купить домен</b> (reg.ru, ~150 ₽) и с Claude подключить его к сайту.</div></div>
+<div class="step"><span class="step__num">3</span><div class="step__body"><b>Написать с Claude посты в Telegram-канал:</b> о себе, подборка, фишки, личная история.</div></div>
+<div class="step"><span class="step__num">4</span><div class="step__body"><b>Положить урок в закреп канала</b> со ссылкой на сайт.</div></div>
+<div class="step"><span class="step__num">5</span><div class="step__body"><b>Настроить кодовое слово в Instagram</b> («урок», «реклама» или своё), которое ведёт в канал.</div></div>
+<div class="step"><span class="step__num">6</span><div class="step__body"><b>Прислать мне все обновлённые материалы:</b> новую ЦА, переписанный урок и всё, что поменялось.</div></div>
+<div class="highlight"><strong>С моей стороны к следующему созвону:</strong> полный пакет скиллов (reels и прогревы) под твои новые материалы, адаптированная упаковка профиля и установка того, что не встало.</div>
+
+<div class="btn-row">
+  <a class="btn btn--primary" href="downloads/pdf/konspekt-sozvon-19-10-voronka.pdf" download>Скачать PDF</a>
+  <a class="btn" href="index.html">← Дорожная карта</a>
+</div>
+
+</div>
+
+<footer class="footer">© 2026 · maysoulme · Личная работа. Конспект созвона 19.10.2026.</footer>
+
+</body>
+</html>
